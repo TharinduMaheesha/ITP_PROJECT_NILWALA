@@ -12,5 +12,5 @@
 
 <%@ include file="WEB-INF/Student_header.jsp" %>  
 </body>
-<footer></footer>
+<footer>test</footer>
 </html>
