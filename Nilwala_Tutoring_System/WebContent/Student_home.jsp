@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="student_styles.css">
 
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Check the cart</title>
 </head>
 <body>
 
