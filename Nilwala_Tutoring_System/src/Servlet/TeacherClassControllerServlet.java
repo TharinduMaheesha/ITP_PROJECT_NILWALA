@@ -70,9 +70,10 @@ public class TeacherClassControllerServlet extends HttpServlet {
 		String date = request.getParameter("class_date");
 		String start = request.getParameter("class_time_start");
 		String end = request.getParameter("class_time_end");
+		String subject = request.getParameter("subject");
 
 		
-		sclass = new SubjectClass(level, grade, ekey, date, start, end);
+		sclass = new SubjectClass(level, grade, ekey, date, start, end , subject);
 	
 
 		

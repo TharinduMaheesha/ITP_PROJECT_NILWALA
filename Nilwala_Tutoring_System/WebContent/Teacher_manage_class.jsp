@@ -1,3 +1,6 @@
+<%@page import="Util.ClassControllerUtil"%>
+<%@page import="Servlet.TeacherClassControllerServlet"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="Model.SubjectClass"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -15,11 +18,7 @@
 <body>
 
 <%@ include file="WEB-INF/Teacher_header.jsp" %>  
-<%
-SubjectClass sub = (SubjectClass)request.getAttribute("ClassDetails");
-	request.setAttribute("details", sub);
 
-%>
 	<div>
 		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
 		  <li><a href="Teacher_class_home.jsp"><b>Classes</b></a></li>		

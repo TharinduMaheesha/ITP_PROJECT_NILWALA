@@ -195,3 +195,47 @@ input[type=submit]:hover {
     margin-top: 0;
   }
 }
+#tm_myInput {
+
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid black;
+  margin: auto;
+}
+
+#tm_myTable {
+  border-collapse: collapse;
+  width: 90%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+  margin: auto;
+}
+
+#tm_myTable th, #tm_myTable td {
+  text-align: center;
+  padding: 20px;
+}
+
+#tm_myTable tr {
+  border-bottom: 2px solid black;
+  	  text-align: center;
+  
+}
+#tm_myTable th {
+	background-color: #189431;
+	  color: white;
+	  text-align: center;
+	  padding: 45px;
+	
+}
+#tm_myTable button {
+	  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	   background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 20px 24px; /* Some padding */
+  cursor: pointer;
+	
+}
+

@@ -1,3 +1,7 @@
+<%@page import="Util.ClassControllerUtil"%>
+<%@page import="Model.SubjectClass"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.mysql.cj.x.protobuf.MysqlxDatatypes.Array"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -50,6 +54,28 @@
           <option value="11">11</option>
           <option value="12">12</option>
           <option value="13">13</option>
+        </select>
+      </div>
+  
+    </div>
+      <div class="tm_row">
+      <div class="tm_col-25">
+        <label >Subject :</label>
+      </div>
+      <div class="tm_col-75">
+        <select name = "subject" required>
+            <%
+      	String level = request.getParameter("class_level");  
+            
+            ArrayList<SubjectClass> array = ClassControllerUtil.subjectNamesForLevel("olevel");
+            
+            for(SubjectClass sub : array){
+            	
+            
+      
+      %>
+          <option value=<%=sub.getSubject() %>><%=sub.getSubject() %></option>
+          <%} %>
         </select>
       </div>
     </div>

@@ -3,9 +3,9 @@ package Model;
 public class SubjectClass {
 
 	
-	private String level , grade , key , date , start , end , video , quiz;
+	private String level , grade , key , date , start , end , video , quiz , subject , id;
 
-	public SubjectClass(String level, String grade, String key, String date, String start, String end) {
+	public SubjectClass(String level, String grade, String key, String date, String start, String end , String subject) {
 		super();
 		this.level = level;
 		this.grade = grade;
@@ -13,6 +13,7 @@ public class SubjectClass {
 		this.date = date;
 		this.start = start;
 		this.end = end;
+		this.subject = subject;
 	}
 	
 	
@@ -94,6 +95,31 @@ public class SubjectClass {
 	public void setQuiz(String quiz) {
 		this.quiz = quiz;
 	}
+
+
+
+	public String getSubject() {
+		return subject;
+	}
+
+
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+
+
+	public String getId() {
+		return id;
+	}
+
+
+
+	public void setId(String id) {
+		this.id = id;
+	}
+	
 	
 	
 	

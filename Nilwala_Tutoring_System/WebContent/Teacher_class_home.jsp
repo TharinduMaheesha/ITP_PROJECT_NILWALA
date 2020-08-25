@@ -1,3 +1,4 @@
+<%@page import="Util.ClassControllerUtil"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -27,7 +28,11 @@
 			  <div class="tm_column">
 				    <div class="tm_card">
 				      <p><i class="fa fa-check"></i></p>
-				      <h3>0</h3>
+				      <%
+				      	String held = ClassControllerUtil.classCount();
+				      
+				      %>
+				      <h3><%=held %></h3>
 				      <p>Total Classes held</p>
 				    </div>
 				  </div>
@@ -35,7 +40,7 @@
 		<div class = "tm_button_container">
 			<div class="tm_btn-group1">
 				  <button onclick="window.location.href= 'Teacher_create_class.jsp'">Create Class</button><br>
-				  <button onclick="window.location.href= 'Teacher_view_class.jsp'">Manage Classes</button><br>
+				  <button onclick="window.location.href= 'Teacher_available_classes.jsp'">Manage Classes</button><br>
 				  <button onclick="window.location.href= 'Teacher_class_history.jsp'">Class History</button><br>
 			</div>
 		</div>
