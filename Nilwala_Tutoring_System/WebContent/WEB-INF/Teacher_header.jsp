@@ -155,10 +155,15 @@
   margin-top: 8px;
   font-size: 17px;
   border: none;
+  width : 80%;
 }
 
 .topnav .search-container button:hover {
   background: #ccc;
+}
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
 }
 
 
@@ -172,7 +177,7 @@
 			<img src=".\images\green_header.png"  class="responsives">
 		</div>
 
-	<hr>
+	<hr class = "rounded">
 	<div class="topnav" id="myTopnav">
 	  <a href="#home" class="active">Home</a>
 	  <a href="#news">Subjects</a>
@@ -202,7 +207,7 @@
 	  
 	  
 	 
-		<hr>
+	<hr class = "rounded">
 	
 <script>
 function myFunction() {
