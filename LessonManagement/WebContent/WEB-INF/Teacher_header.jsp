@@ -134,7 +134,16 @@
  
   
 }
-
+.responsives1 {
+  width:100%;
+  max-width: 100%;
+  height: 600px;
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.5;
+  
+}
 .topnav .search-container {
   float: right;
 }
@@ -156,10 +165,27 @@
   font-size: 17px;
   border: none;
 }
-
-.topnav .search-container button:hover {
-  background: #ccc;
+#lesson {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
+
+#lesson td, #lesson th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#lesson tr:nth-child(even){background-color: #f2f2f2;}
+
+#lesson tr:hover {background-color: #ddd;}
+
+#lesson th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
 
 
 </style>

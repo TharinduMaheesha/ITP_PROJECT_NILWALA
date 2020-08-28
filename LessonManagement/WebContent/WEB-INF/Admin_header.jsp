@@ -169,7 +169,7 @@
 
 
 		<div class = "blah">
-			<img src=".\images\red_header.png"  class="responsives">
+			<img src=".\images\red_header.png"  class="responsives1">
 		</div>
 
 	<hr>
