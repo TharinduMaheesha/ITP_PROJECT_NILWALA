@@ -1,23 +1,44 @@
-ul.breadcrumb {
-  padding: 10px 16px;
-  list-style: none;
-  background-color: white;
+.btn
+{
+		width: 30%;
+		font-weight:bold;
+		background-color: #005cda;
+		color: white;
+		padding: 12px 20px;
+		margin:15px 210px;
+		border:20px 10px;
+		border-radius: 4px;
+		box-sizing: border-box;
+		cursor:pointer;
 }
-ul.breadcrumb li {
-  display: inline;
-  font-size: 25px;
+
+.pop
+{
+		width: 15%;
+		padding: 12px 20px;
+		margin:15px 210px;
 }
-ul.breadcrumb li+li:before {
-  padding: 10px;
-  color: black;
-  content: "/\00a0";
+
+table
+{
+	border-collapse:collapse;
+	border:1px solid black;
+	width:80%;
+	margin-right:150px;
+	margin-left:150px;
+	
 }
-ul.breadcrumb li a {
-  color: black;
-  text-decoration: none;
-  font-family: sans-serif;
+th
+{
+	background-color: #000000;
+	font-weight:bold;
+	color: white;
+	height:50px;
+	text-align:center;
+	padding:6px;
+	margin-left:15px;
 }
-ul.breadcrumb li a:hover {
-  color: blue;
-  text-decoration: underline;
+tr:hover
+{
+	background-color:#005cda;
 }
