@@ -32,6 +32,17 @@
   </servlet-mapping>
   
   
+  <servlet>
+         <servlet-name>UpdateSchedule</servlet-name>
+        <servlet-class>com.schedule.UpdateScheduleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+          <servlet-name>UpdateSchedule</servlet-name>
+          <url-pattern>/update</url-pattern>
+  
+  </servlet-mapping>
+  
+  
   
   
   

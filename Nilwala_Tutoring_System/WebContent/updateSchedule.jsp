@@ -19,11 +19,11 @@
        String grade = request.getParameter("grade");
    %>
  
-    <form action="#" method="post">
-       Schedule Id :<input type="text" name="schid" value="<%= schid %>"><br>
+    <form action="update" method="post">
+       Schedule Id :<input type="text" name="schid" value="<%= schid %>" readonly><br>
        Subject Code :<input type="text" name="subjectcode" value="<%= subjectcode %>"><br>
        Teacher's Id :<input type="text" name="techerid" value="<%= teacherid %>"><br>
-       Created Date :<input type="date" name="createdate" vaue="<%= createdate %>"><br>
+       Created Date :<input type="date" name="createdate" value="<%= createdate %>"><br>
        Time-from    :<input type="time" name="timefrom" value="<%= timefrom %>"><br>
        Time-to      :<input type="time" name="timeto" value="<%= timeto %>"><br>
        Class date   :<input type="date" name="classdate" value="<%= classdate %>"><br>

@@ -11,6 +11,7 @@ import java.util.List;
 
 public class TeacherDBUtil {
 	
+	private static boolean isSuccess;
 	private static Connection con  = null;
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
@@ -83,6 +84,35 @@ public class TeacherDBUtil {
 		
 	}
 	
+	public static boolean updateSchedule(String schid , String subjectcode , String teacherid , String createdate , String timefrom , String timeto , String classdate , String grade) {
+		
+		try {
+			
+			con = DBConnect.getConnection();
+			stmt = con.createStatement();
+			String sql = "update schedule set subject_code='"+subjectcode+"' , teacher_id = '"+teacherid+"' , date_created = '"+createdate+"' , time_from = '"+timefrom+"' , time_to = '"+timeto+"' , class_date = '"+classdate+"' , grade = '"+grade+"' " 
+			              + "where schedule_id = '"+schid+"'  ";
+			int rs = stmt.executeUpdate(sql);
+			
+			if(rs > 0) {
+				
+				isSuccess = true;
+			}
+			else {
+				
+				isSuccess = false;
+			}
+			
+		}
+		catch(Exception e) {
+		
+			e.printStackTrace();
+		}
+		
+		return isSuccess;
+		
+		
+	}
 	
 	
 
