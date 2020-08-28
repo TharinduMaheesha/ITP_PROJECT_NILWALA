@@ -1,6 +1,7 @@
 package com.schedule;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -31,11 +32,18 @@ public class UpdateScheduleServlet extends HttpServlet {
 		
 		if(isTrue == true) {
 			
-			RequestDispatcher dis = request.getRequestDispatcher("success.jsp");
+			List<Teacher> teaDetails = TeacherDBUtil.getScheduleDetails(schid);
+			request.setAttribute("teaDetails" , teaDetails);
+			
+			RequestDispatcher dis = request.getRequestDispatcher("scheduleaccount.jsp");
 			dis.forward(request, response);
 		}
 		else {
-			RequestDispatcher dis = request.getRequestDispatcher("unsuccess.jsp");
+			
+			List<Teacher> teaDetails = TeacherDBUtil.getScheduleDetails(schid);
+			request.setAttribute("teaDetails" , teaDetails);
+			
+			RequestDispatcher dis = request.getRequestDispatcher("scheduleaccount.jsp");
 			dis.forward(request, response);
 			
 		}

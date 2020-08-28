@@ -114,6 +114,47 @@ public class TeacherDBUtil {
 		
 	}
 	
+	public static List<Teacher> getScheduleDetails(String Schid)
+	{
+		int convertedID = Integer.parseInt(Schid);
+		
+		
+		
+		ArrayList<Teacher> tea = new ArrayList<>();
+		
+		try {
+			
+			con = DBConnect.getConnection();
+			stmt = con.createStatement();
+			String sql = "select * from schedule where schedule_id = '"+convertedID+"' ";
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				
+				int schedule_id = rs.getInt(1);
+				String subject_code = rs.getString(2);
+				int teacher_id = rs.getInt(3);
+				String date_created = rs.getString(4);
+				String time_from = rs.getString(5);
+				String time_to = rs.getString(6);
+				String class_date = rs.getString(7);
+				int grade = rs.getInt(8);
+				
+				Teacher t = new Teacher(schedule_id,subject_code,teacher_id,date_created,time_from,time_to,class_date,grade);
+				tea.add(t);
+				
+			}
+		}
+		catch(Exception e) {
+			
+			e.printStackTrace();
+		}
+		
+	
+		
+		return tea;
+		
+	}
 	
 
 }
