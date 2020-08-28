@@ -1,4 +1,4 @@
-package com.admin;
+package com.schedule;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -57,7 +57,48 @@ public class TeacherDBUtil {
 		}
 		
 		return tea;
+	}
+	
+	public static boolean Insertschedule(String subject_code , String teacher_id , String date_created , String time_from , String time_to , String class_date , String grade) {
+		
+		boolean isSuccess = false;
+		
+		//create database connection
+				String url = "jdbc:mysql://localhost:3306/nilwala_online_system";
+				String user = "root";
+				String password = "hashini";
+				
+		try {
+			
+             Class.forName("com.mysql.jdbc.Driver");
+			
+			 Connection con = DriverManager.getConnection(url, user, password);
+			 Statement stmt = con.createStatement(); 
+			 String sql = "insert into schedule values(0,'"+subject_code+"' , '"+teacher_id+"' , '"+date_created+"' , '"+time_from+"' , '"+time_to+"' , '"+class_date+"', '"+grade+"')";
+			 int rs = stmt.executeUpdate(sql);
+			 
+			 if(rs > 0) {
+				 
+				 isSuccess = true;
+				 
+			 }else {
+				 
+				 isSuccess = false;
+			 }
+			 
+			 
+		}	
+		catch(Exception e) {
+			
+			e.printStackTrace();
+			
+		}
+		
+		return isSuccess;
 		
 	}
+	
+	
+	
 
 }

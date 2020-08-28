@@ -7,9 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
- 
- <center><label>Hashini ariyasena</label></center>
- <center><label>Hashini ariyasena</label></center>
- 
+
+   <h1> Successfullly Inset to the database</h1>
+
 </body>
 </html>

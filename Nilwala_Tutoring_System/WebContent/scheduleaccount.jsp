@@ -9,16 +9,50 @@
 </head>
 <body>
 
+ <center><table width ="480" height = "380" class = "table">
+
      <c:forEach var="tea" items="${teaDetails}">
      
-     ${tea.schedule_id}
-     ${tea.subject_code}
-     ${tea.teacher_id}
-     ${tea.date_created}
-     ${tea.time_from}
-     ${tea.time_to}
-     ${tea.class_date}
-     ${tea.grade}
+     <tr>
+    <td>Schedule Id :</td> 
+     <td>${tea.schedule_id}</td>
+     </tr>
+     
+     <tr>
+     <td>Subject Code :</td> 
+     <td>${tea.subject_code}</td>
+     </tr>
+     
+     <tr>
+     <td>Teacher's Id :</td> 
+     <td>${tea.teacher_id}</td>
+     </tr>
+     
+     <tr>
+     <td>Created Date :</td> 
+     <td>${tea.date_created}</td>
+     </tr>
+     
+     <tr>
+     <td>Time-from :</td> 
+     <td>${tea.time_from}</td>
+     </tr>
+     
+     <tr>
+     <td>Time-to :</td> 
+     <td>${tea.time_to}</td>
+     </tr>
+     
+     <tr>
+     <td>Class date :</td> 
+     <td>${tea.class_date}</td>
+     </tr>
+     
+     <tr>
+     <td>Schedule Id :</td> 
+     <td>${tea.grade}</td>
+     </tr>
+     
      
      
      
