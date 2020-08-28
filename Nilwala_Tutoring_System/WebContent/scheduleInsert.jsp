@@ -19,7 +19,7 @@
 	Grade        :<input type="text" name="grade"><br>
 	
 	
-	<input type="submit" name="submit" vale="Schedule a new session">
+	<input type="submit" name="submit" value="Schedule a new session">
 	
 	</form>
 

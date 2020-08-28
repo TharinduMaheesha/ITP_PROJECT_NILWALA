@@ -13,6 +13,18 @@
 
      <c:forEach var="tea" items="${teaDetails}">
      
+     <c:set var="schid" value="${tea.schedule_id}"/> 
+     <c:set var="subjectcode" value="${tea.subject_code}"/> 
+     <c:set var="teacherid" value="${tea.teacher_id}"/> 
+     <c:set var="datecreated" value="${tea.date_created}"/> 
+     <c:set var="timefrom" value="${tea.time_from}"/> 
+     <c:set var="timeto" value="${tea.time_to}"/> 
+     <c:set var="classdate" value="${tea.class_date}"/>  
+     <c:set var="grade" value="${tea.grade}"/> 
+    
+     
+     
+     
      <tr>
     <td>Schedule Id :</td> 
      <td>${tea.schedule_id}</td>
@@ -53,11 +65,26 @@
      <td>${tea.grade}</td>
      </tr>
      
-     
-     
-     
      </c:forEach>
-
+     </table>
+     
+     <c:url value="updateSchedule.jsp" var="schupdate"> 
+    <c:param name="schid" value="${schid}"/>
+    <c:param name="subjectcode" value="${subjectcode}"/>
+    <c:param name="teacherid" value="${teacherid}"/>
+    <c:param name="createdate" value="${datecreated}"/>
+    <c:param name="timefrom" value="${timefrom}"/>
+    <c:param name="timeto" value="${timeto}"/>
+    <c:param name="classdate" value="${classdate}"/>
+    <c:param name="grade" value="${grade}"/>
+   
+ 
+    </c:url>
+     
+     <a href="${schupdate}">
+     <input type="button" name="update" value="Update session details">
+     </a>
+     
 
 </body>
 </html>

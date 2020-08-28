@@ -11,29 +11,22 @@ import java.util.List;
 
 public class TeacherDBUtil {
 	
+	private static Connection con  = null;
+	private static Statement stmt = null;
+	private static ResultSet rs = null;
+	
+	
 	public static List<Teacher> validate(String subject_code){
 		
 		ArrayList<Teacher> tea = new ArrayList<>();
 		
-		//create database connection
-		String url = "jdbc:mysql://localhost:3306/nilwala_online_system";
-		String user = "root";
-		String password = "hashini";
-		
-		
-		
-		
-		
 		//validate
 		
 		try {
-			
-			Class.forName("com.mysql.jdbc.Driver");
-			
-			Connection con = DriverManager.getConnection(url, user, password);
-			Statement stmt = con.createStatement(); 
+			con = DBConnect.getConnection();
+			stmt = con.createStatement();
 			String sql = "select * from schedule where subject_code='"+subject_code+"' ";
-            ResultSet rs = stmt.executeQuery(sql);
+            rs = stmt.executeQuery(sql);
             
             if(rs.next()) {
             	int schedule_id = rs.getInt(1);
@@ -63,17 +56,9 @@ public class TeacherDBUtil {
 		
 		boolean isSuccess = false;
 		
-		//create database connection
-				String url = "jdbc:mysql://localhost:3306/nilwala_online_system";
-				String user = "root";
-				String password = "hashini";
-				
 		try {
-			
-             Class.forName("com.mysql.jdbc.Driver");
-			
-			 Connection con = DriverManager.getConnection(url, user, password);
-			 Statement stmt = con.createStatement(); 
+			 con = DBConnect.getConnection();
+			 stmt = con.createStatement();
 			 String sql = "insert into schedule values(0,'"+subject_code+"' , '"+teacher_id+"' , '"+date_created+"' , '"+time_from+"' , '"+time_to+"' , '"+class_date+"', '"+grade+"')";
 			 int rs = stmt.executeUpdate(sql);
 			 
