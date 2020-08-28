@@ -168,12 +168,15 @@
 #lesson {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
+    margin-left: auto;
+  margin-right: auto;
 }
 
 #lesson td, #lesson th {
   border: 1px solid #ddd;
-  padding: 8px;
+  padding: 12px;
+  
 }
 
 #lesson tr:nth-child(even){background-color: #f2f2f2;}
@@ -183,6 +186,7 @@
 #lesson th {
   padding-top: 12px;
   padding-bottom: 12px;
+  padding-left: 20px;
   text-align: left;
   background-color: #4CAF50;
   color: white;

@@ -21,3 +21,53 @@ ul.breadcrumb li a:hover {
   color: blue;
   text-decoration: underline;
 }
+.btta {
+  background-color: #3498DB; /* blue */
+  border: none;
+  color: white;
+  padding: 8px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-weight : bold;
+}
+.btta {
+  background-color: #3498DB; 
+  color: white;
+  border: 2px solid white;
+}
+
+.btta:hover {
+  background-color: #AED6F1 ;
+  color: black;
+}
+#lesson {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+    margin-left: auto;
+  margin-right: auto;
+}
+
+#lesson td, #lesson th {
+  border: 1px solid #ddd;
+  padding: 12px;
+  
+}
+
+#lesson tr:nth-child(even){background-color: #f2f2f2;}
+
+#lesson tr:hover {background-color: #ddd;}
+
+#lesson th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+  text-align: left;
+  background-color:  #566573 ;
+  color: white;
+
