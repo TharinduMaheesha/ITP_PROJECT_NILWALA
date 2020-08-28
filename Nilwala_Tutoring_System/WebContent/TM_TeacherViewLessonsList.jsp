@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-
 <html>
 <head>
 <link rel="stylesheet" href="teacher_styles.css">
@@ -15,7 +14,7 @@
 
 	<div>
 		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home</b></a></li>		  
+		  <li><a href="#"><b>Subject</b></a></li>		  
 		</ul>
 	</div>
 	<hr>
