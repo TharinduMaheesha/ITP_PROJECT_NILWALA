@@ -7,6 +7,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.schedule.Teacher;
+
 
 
 public class TeacherDBUtil {
@@ -155,6 +157,40 @@ public class TeacherDBUtil {
 		return tea;
 		
 	}
+	
+	public static boolean deleteSchedule(String schid) {
+		
+		int convId = Integer.parseInt(schid);
+		
+		try {
+			con = DBConnect.getConnection();
+			stmt = con.createStatement();
+			
+			String sql = "delete from schedule where schedule_id = '"+convId+"' " ; 
+			int r = stmt.executeUpdate(sql);
+			
+			if(r > 0) {
+				
+				isSuccess = true;
+				
+			}
+			else {
+				
+				isSuccess = false;
+			}
+			
+			
+		}
+		catch(Exception e){
+			
+			e.printStackTrace();
+			
+		}
+		
+		return isSuccess;
+	}
+	
+	
 	
 
 }

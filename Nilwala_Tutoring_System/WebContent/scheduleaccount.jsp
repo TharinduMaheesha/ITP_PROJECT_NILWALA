@@ -83,8 +83,23 @@
      
      <a href="${schupdate}">
      <input type="button" name="update" value="Update session details">
-     </a>
+     </a><br><br>
      
+    <c:url value="deleteSchedule.jsp" var="schdelete"> 
+    <c:param name="schid" value="${schid}"/>
+    <c:param name="subjectcode" value="${subjectcode}"/>
+    <c:param name="teacherid" value="${teacherid}"/>
+    <c:param name="createdate" value="${datecreated}"/>
+    <c:param name="timefrom" value="${timefrom}"/>
+    <c:param name="timeto" value="${timeto}"/>
+    <c:param name="classdate" value="${classdate}"/>
+    <c:param name="grade" value="${grade}"/>
+     
+     </c:url>
+     
+     <a href="${schdelete}">
+     <input type="button" name="delete" value="Delete session details">
+     </a>
 
 </body>
 </html>
