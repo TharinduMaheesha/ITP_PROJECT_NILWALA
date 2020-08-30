@@ -28,11 +28,34 @@
 	<input type="text" id="tm_myInput" onkeyup="myFunction()" placeholder="Search for subject name.." title="Type in a name">
 	
 	
-	<div style = "width : 100% ; margin: auto ; background-color: #e3e3e3 ; margin-top: 12px; padding-bottom: 50px ; padding-top: 50px ; overflow-x:auto;">
+	
+			<%
+		ArrayList<SubjectClass> array = ClassControllerUtil.AvailableClasses();
+
+			
+			if(array.size() == 0){
+				
+			%>
+			  <div style = "width : 100% ; margin: auto ; background-color: #e3e3e3 ; margin-top: 12px; padding-bottom: 50px ; padding-top: 50px ; overflow-x:auto;">
+					<p style = "font-family: sans-serif; font-size: 20px ; text-align: center; color : black;"><b> There are no Classes to be displayed at the moment</b></p>
+			
+      <input onclick="window.location.href = 'Teacher_create_class.jsp'" type="button" value="Create Class" name = "editClass"style = "margin-right : 10px ; font-size:20px; width : 20% ; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); padding: 20px 24px">
+			</div>
+			
+			<br><br>
+			<%} 
+			
+			
+	else {
+
+			
+		
+%>	
+
+		<div style = "width : 100% ; margin: auto ; background-color: #e3e3e3 ; margin-top: 12px; padding-bottom: 50px ; padding-top: 50px ; overflow-x:auto;">
 		<p style = "font-family: sans-serif; font-size: 20px ; text-align: center;"><b> Select a class to view or edit </b></p>
 	
 			<br><br>
-				
 				<table id="tm_myTable">
 				  <tr class="tm_header">
 				    <th style="width:20%;">ClassID</th>
@@ -44,24 +67,28 @@
 				    
 				    
 				  </tr>
-<%
-		ArrayList<SubjectClass> array = ClassControllerUtil.AvailableClasses();
-
-		for(SubjectClass sub  : array){
-			
-		
-%>
+				  <%			for(SubjectClass sub  : array){
+ %>
+<form method="post" action="TeacherClassControllerServlet">
 				  <tr>
 				    <td><b><%=sub.getId() %></b></td>
 				    <td><b><%=sub.getSubject() %></b></td>
 				    <td><b><%=sub.getGrade() %></b></td>
 				    <td><b><%=sub.getDate() %></b></td>
 				    <td><b><%=sub.getStart() %></b>	</td>
-				    <td><b><button>Select</button>
+				    <td><b><button name = "saveClass" value = "select">Select</button>
+				    
+				    <input type="hidden" value = <%=sub.getId() %> name = "class_id">
 				    
 				  </tr>
-				  <%} %>
+				  </form>
+				<%} %>
 				</table>
+				
+				  <%	
+					}
+			
+	%>
 				
 				<script>
 						function myFunction() {
@@ -81,9 +108,9 @@
 						      }
 						    }       
 						  }
+						  
 						}
 					</script>
-				
 	
 	</div>
 </body>

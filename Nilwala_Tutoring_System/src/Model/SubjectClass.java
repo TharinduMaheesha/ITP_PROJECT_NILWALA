@@ -1,9 +1,12 @@
 package Model;
 
+import java.sql.Blob;
+
 public class SubjectClass {
 
 	
-	private String level , grade , key , date , start , end , video , quiz , subject , id;
+	private String level , grade , key , date , start , end , video , quiz , subject , id ;
+	private Blob path;
 
 	public SubjectClass(String level, String grade, String key, String date, String start, String end , String subject) {
 		super();
@@ -118,6 +121,18 @@ public class SubjectClass {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+
+
+	public Blob getPath() {
+		return path;
+	}
+
+
+
+	public void setPath(Blob path) {
+		this.path = path;
 	}
 	
 	

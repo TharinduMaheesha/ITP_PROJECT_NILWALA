@@ -41,7 +41,7 @@
         <label for="country">Add Video : </label>
       </div>
       <div class="tm_col-75">
-       <input type = "text" name = "video_path" required="required" >
+       <input type = "file" name = "video_path" required="required" >
       </div>
       </div>
       
@@ -50,7 +50,7 @@
         <label for="country">Add Quiz Link : </label>
       </div>
       <div class="tm_col-75">
-       <input type = "file" placeholder="Copy and paste tour quiz link here...." name = "quiz_link" required="required" >
+       <input type = "text" placeholder="Copy and paste tour quiz link here...." name = "quiz_link" required="required" >
       </div>
       </div>
       

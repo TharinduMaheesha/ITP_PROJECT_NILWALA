@@ -3,14 +3,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="WEB-INF/lib/test.css">
+
 
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
 </head>
 <body>
 
-<%@ include file="WEB-INF/Student_header.jsp" %>  
+<%@ include file="WEB-INF/Home_header.jsp" %>  
+
+
+	
+	
 </body>
 <footer>test</footer>
 </html>

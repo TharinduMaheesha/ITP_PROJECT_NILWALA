@@ -131,6 +131,7 @@ input[type=date],[type=time],[type = file]{
   border-radius: 4px;
   resize: vertical;
   
+  
 }
 
 label {
@@ -237,5 +238,13 @@ input[type=submit]:hover {
   padding: 20px 24px; /* Some padding */
   cursor: pointer;
 	
+}
+
+.tm_video video{
+  width: 100%;
+  height: auto;
+  max-width: 60%;
+  margin:auto;
+  display: block
 }
 

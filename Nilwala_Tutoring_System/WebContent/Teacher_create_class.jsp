@@ -65,7 +65,6 @@
       <div class="tm_col-75">
         <select name = "subject" required>
             <%
-      	String level = request.getParameter("class_level");  
             
             ArrayList<SubjectClass> array = ClassControllerUtil.subjectNamesForLevel("olevel");
             
