@@ -41,7 +41,7 @@ ${stu.name};
 		  </tbody>
 		
 		</table>
-		<center><input type ="submit" value="Pay Now"  class="btn btn-primary"></center>
+		<center><input type ="submit" value="Pay Now"  class="btn btn-primary btn-lg"></center>
 		
 </form>
 	</div>

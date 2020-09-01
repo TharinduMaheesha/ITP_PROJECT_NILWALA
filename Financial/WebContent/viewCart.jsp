@@ -16,11 +16,11 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 	<div class="shadow-lg p-3 mb-5 bg-white rounded">
 
 		<form action="user" method="post">
-			<center><lable>Enter your ID number to continue</lable></center>
 		
-			
+			<center><lable>Enter your ID number to continue</lable></center>
 			<center><input type ="text" name="StudentID" required ></center><br><br>
 			<center><input type ="submit" value="view cart" class="btn btn-primary"></center>
+		
 		</form>
 	</div>
 	<hr>
