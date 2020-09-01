@@ -1,9 +1,11 @@
 package com.util;
 
+import java.util.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
+import com.student.Student;
 import com.util.DBconnect;
 
 public class StudentDButil 
@@ -14,30 +16,28 @@ public class StudentDButil
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
 	 
-	public static boolean viewCart(String StudentID)
+	public static List<Student> viewCart(String StudentID)
 	{
-		boolean isSuccess = false;
+		ArrayList<Student> stu  = new ArrayList<>();
 		
-		try 
-		{
+		try {
 			con = DBconnect.getConnection();
 			stmt = con.createStatement();
-			String sql = "select level,name from ('"+fname+"','"+lname+"','"+school+"','"+grade+"','"+email+"')";
-			int rs = stmt.executeUpdate(sql);
+			String sql = "select level,name from subject s,studentsubscription t where s.subjectCode=t.subjectCode AND studentID='"+StudentID+"' ";
+			rs = stmt.executeQuery(sql);
 			
-			if(rs>0)
-			{
-				isSuccess = true;
-			}
-			else
-			{
-				isSuccess = false;
+			while(rs.next()) {
+				String level=rs.getString(1);
+				String name=rs.getString(2);
+				
+				Student st = new Student(level,name);
+				stu.add(st);
 			}
 		}
-		catch(Exception e)
-		{
+		catch(Exception e){
 			e.printStackTrace();
 		}
-		return isSuccess; 
+		return stu;
+	
 	}
 }

@@ -1,7 +1,7 @@
 package com.servlet;
 
 import java.io.IOException;
-
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.student.Student;
 import com.util.StudentDButil;
 
 
@@ -21,22 +22,18 @@ public class viewCartServlet extends HttpServlet {
 	{
 		String StudentID = request.getParameter("StudentID");			
 		
-		boolean isTrue;
+		try {
+			List<Student> cartDetails = StudentDButil.viewCart(StudentID);
+			request.setAttribute("cartDetails", cartDetails);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
 		
-		isTrue = StudentDButil.viewCart(StudentID);
-		
-	
 			
-		if(isTrue==true)
-		{
 			RequestDispatcher dis = request.getRequestDispatcher("cart.jsp");		 
-			dis.forward(request,response)
-		}
-		else
-		{
-			RequestDispatcher dis2 = request.getRequestDispatcher("");		
-			dis2.forward(request,response);
-		}
+			dis.forward(request,response);
+	
 	}
 
 }

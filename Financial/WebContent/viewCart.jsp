@@ -15,11 +15,11 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 <%@ include file="WEB-INF/Student_header.jsp" %> 
 	<div class="shadow-lg p-3 mb-5 bg-white rounded">
 
-		<form action="" method="POST" >
+		<form action="user" method="post">
 			<center><lable>Enter your ID number to continue</lable></center>
 		
 			
-			<center><input type ="text" name="StudentID"></center><br><br>
+			<center><input type ="text" name="StudentID" required ></center><br><br>
 			<center><input type ="submit" value="view cart" class="btn btn-primary"></center>
 		</form>
 	</div>

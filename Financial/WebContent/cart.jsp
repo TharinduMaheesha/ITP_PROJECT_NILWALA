@@ -19,6 +19,12 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 
 <div class="shadow-lg p-3 mb-5 bg-white rounded">
 <form>
+
+<c:forEach var="stu" items="${cartDetails}"> 
+${stu.level};
+${stu.name};
+</c:forEach>
+
 		<table class="table table-hover table-dark" class="kl" >
 		  <thead>
 		    <tr>
@@ -26,12 +32,14 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 		      <th scope="col" class="text-center">Subject</th>
 		    </tr>
 		  </thead>
+		  
 		  <tbody>
 		    <tr>
 		      <td></td>
 		      <td></td>
 		    </tr>
 		  </tbody>
+		
 		</table>
 		<center><input type ="submit" value="Pay Now"  class="btn btn-primary"></center>
 		
