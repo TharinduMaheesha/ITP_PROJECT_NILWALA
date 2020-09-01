@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class TM_DBconnect {
-	private static String url = "jdbc:mysql://localhost:3306/tm_lesson";
+	private static String url = "jdbc:mysql://localhost:3306/lessonmanagement";
 	private static String userName = "root";
 	private static String password = "";
 	
@@ -16,7 +16,7 @@ public class TM_DBconnect {
 			
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			con = DriverManager.getConnection(url, userName, password);
+			con = DriverManager.getConnection(url,userName,password);
 			
 		}
 		catch (Exception e) {

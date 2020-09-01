@@ -14,19 +14,19 @@ public class TM_Lesson {
 		this.lesson_name = lesson_name;
 	}
 	
-		public int getTId() {
+		public int getTeacher_id() {
 	        return teacher_id;
 	    }
 
-	    public String getScode() {
+	    public String getSubject_code() {
 	        return subject_code;
 	    }
 
-	    public int getLNo() {
+	    public int getLesson_no() {
 	        return lesson_no;
 	    }
 	    
-	    public String getLname() {
+	    public String getLesson_name() {
 	        return lesson_name;
 	    }
 }
