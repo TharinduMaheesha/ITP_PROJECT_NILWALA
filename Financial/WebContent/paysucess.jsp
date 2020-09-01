@@ -55,7 +55,7 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
         <h5 class="card-title">Claim a refund</h5>
         <p class="card-text">You can claim a refund after making a payment within next 48 hours.
         	 You should have a valid reason.</p>
-        <a href="#" class="btn btn-warning">Claim a refund</a>
+        <a href="refundRqst.jsp" class="btn btn-warning">Claim a refund</a>
       </div>
     </div>
   </div>
