@@ -14,7 +14,7 @@ public class StudentDButil
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
 	 
-	public static boolean insertVisitor(String fname, String lname,String school,String grade,String email)
+	public static boolean viewCart(String StudentID)
 	{
 		boolean isSuccess = false;
 		
@@ -22,7 +22,7 @@ public class StudentDButil
 		{
 			con = DBconnect.getConnection();
 			stmt = con.createStatement();
-			String sql = "insert into visitor values('"+fname+"','"+lname+"','"+school+"','"+grade+"','"+email+"')";
+			String sql = "select level,name from ('"+fname+"','"+lname+"','"+school+"','"+grade+"','"+email+"')";
 			int rs = stmt.executeUpdate(sql);
 			
 			if(rs>0)

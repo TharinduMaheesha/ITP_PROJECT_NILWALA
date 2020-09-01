@@ -19,27 +19,22 @@ public class viewCartServlet extends HttpServlet {
       
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-		String fname = request.getParameter("fname");			
-		String lname = request.getParameter("lname");
-		String school = request.getParameter("school");
-		String grade = request.getParameter("grade");
-		String email = request.getParameter("email");
-
+		String StudentID = request.getParameter("StudentID");			
 		
 		boolean isTrue;
 		
-		isTrue = StudentDButil.insertVisitor(fname,lname,school,grade,email);
+		isTrue = StudentDButil.viewCart(StudentID);
 		
 	
 			
 		if(isTrue==true)
 		{
-			RequestDispatcher dis = request.getRequestDispatcher("done.jsp");		 
-			dis.forward(request,response);
+			RequestDispatcher dis = request.getRequestDispatcher("cart.jsp");		 
+			dis.forward(request,response)
 		}
 		else
 		{
-			RequestDispatcher dis2 = request.getRequestDispatcher("done.jsp");		
+			RequestDispatcher dis2 = request.getRequestDispatcher("");		
 			dis2.forward(request,response);
 		}
 	}

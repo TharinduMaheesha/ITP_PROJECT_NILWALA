@@ -174,14 +174,14 @@
 
 	<hr>
 	<div class="topnav" id="myTopnav">
-	  <a href="#home" class="active">Home</a>
+	  <a href="#home" >Home</a>
 	  <a href="#news">Subjects</a>
 	  <a href="#contact">Classes</a>
 	  
   <a href="#about">Tutorials</a>
     <a href="#about">Notices & Appointments</a>
-    <a href="#about">Payments</a>
-  <div class="dropdown">
+    <a href="#about" class="active">Payments</a>
+  <div class="dropdown" >
 	    <button class="dropbtn">Account
 	      <i class="fa fa-caret-down"></i>
 	    </button>
