@@ -43,7 +43,7 @@ Financial Admin's Worksite   |    Financial Admin's Worksite     |Financial Admi
       <div class="card-body">
         <h5 class="card-title">Teacher</h5>
         <p class="card-text"></p>
-        	   <a href="#"> 
+        	   <a href="salaryUpdate.jsp"> 
         	   <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" >Update teachers' monthly salary</button>
         	   </a><br><br>
 			  <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" >Check salary payment history</button><br><br>

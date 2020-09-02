@@ -1,20 +1,25 @@
 package com.student;
 
 public class Student {
-
-	private String level;
+	
+	private String subjectCode;
 	private String name;
-	
-	public Student(String level, String name) {
-		this.level = level;
-		this.name = name;
+	private String level;
+
+	public Student(String subjectCode, String name, String level) {
+		this.subjectCode=subjectCode;
+		this.name=name;
+		this.level=level;
 	}
-	
-	public String getLevel() {
-		return level;
+	public String getSubjectCode() {
+		return subjectCode;
 	}
 	public String getName() {
 		return name;
 	}
+	public String getLevel() {
+		return level;
+	}
+
 	
 }

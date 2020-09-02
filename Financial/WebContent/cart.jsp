@@ -17,28 +17,34 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 
 <div class="progress"><div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
  aria-valuemax="100">25%</div></div><br><br>
-
+<hr>
+	 
 <div class="shadow-lg p-3 mb-5 bg-white rounded">
 <form>
-
-
-
-
-
-		<table class="table table-hover table-dark" >
-				<c:forEach var="stu" items="${cartDetails}"> 
+		<table>
+				<c:forEach var="dis" items="${cartDetails}"> 
 				
 				    <tr>
-				      <td>${stu.level}</td>
-				      <td>${stu.name}</td>
+				    	<td>Subject Code</td>
+				       <td>${dis.subjectCode}</td>
+					</tr>
+					  <tr>
+				    	<td>Name</td>
+				      <td>${dis.name}</td>
 				    </tr>
+					<tr> 
+						<td>Level</td>     
+				      <td>${dis.level}</td>
+				    </tr>
+				   
 						
 				</c:forEach>
 		</table>
+</form>	</div>
 		<center><input type ="submit" value="Pay Now"  class="btn btn-primary btn-lg"></center>
 		
-</form>
-	</div>
+
+
 	<hr>
 	 
 </body>
