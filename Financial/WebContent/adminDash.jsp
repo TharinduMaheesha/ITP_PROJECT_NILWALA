@@ -15,11 +15,44 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 
 <%@ include file="WEB-INF/Admin_header.jsp" %>  
 
-<div>
-		<ul class="breadcrumb"><!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home<b></a></li>
-		</ul>
-	</div>
+<marquee behavior="scroll" direction="left">Financial Admin's Worksite   |    Financial Admin's Worksite     | Financial Admin's Worksite   |    Financial Admin's Worksite     | Financial Admin's Worksite   |    Financial Admin's Worksite     |
+Financial Admin's Worksite   |    Financial Admin's Worksite     |Financial Admin's Worksite   |    Financial Admin's Worksite     |Financial Admin's Worksite   |    Financial Admin's Worksite     |</marquee>
+
+			<center><h4>Financial Admin's Worksite</h4></center><br>
+			<center><div class="spinner-grow text-danger" role="status"><span class="sr-only">Loading...</span></div></center><br>
+		<center><h5>Welcome</h5></center>
+
+<div class="shadow-lg p-3 mb-5 bg-white rounded">
+
+<div class="row row-cols-1 row-cols-md-2">
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Student</h5>
+        <p class="card-text"></p>
+        
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover">Approve Decline Refund Requests</button><br>
+		<br>
+		<button type="button" class="btn btn-lg btn-danger" data-toggle="popover">Check income reports</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Teacher</h5>
+        <p class="card-text"></p>
+        	   <a href="#"> 
+        	   <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" >Update teachers' monthly salary</button>
+        	   </a><br><br>
+			  <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" >Check salary payment history</button><br><br>
+		
+			  <button type="button" class="btn btn-lg btn-danger" data-toggle="popover">Check teachers' subjects and subscriptions</button><br><br>
+      </div>
+    </div>
+  </div>
+</div><br>
 	<hr>
 </body>
 <footer></footer>
