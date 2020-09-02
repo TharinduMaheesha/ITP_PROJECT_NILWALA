@@ -23,7 +23,6 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 <form>
 		<table>
 				<c:forEach var="dis" items="${cartDetails}"> 
-				
 				    <tr>
 				    	<td>Subject Code</td>
 				       <td>${dis.subjectCode}</td>
@@ -36,8 +35,6 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 						<td>Level</td>     
 				      <td>${dis.level}</td>
 				    </tr>
-				   
-						
 				</c:forEach>
 		</table>
 </form>	</div>

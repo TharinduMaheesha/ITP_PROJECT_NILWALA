@@ -19,7 +19,8 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 
 <div class="shadow-lg p-3 mb-5 bg-white rounded">
 
-<form action="sal" method="post">
+<form action="up" method="post">
+
   <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationCustom01">Teacher's ID</label>
@@ -42,11 +43,10 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
       <input type="text" class="form-control"  name="ty" placeholder="salary">
      
     </div>
-</div>
-
   <center><input type="submit" class="btn btn-danger" value="Update teacher's account now"></center>
 </form>
 
+</div>
 </div>
 	<hr>
 </body>

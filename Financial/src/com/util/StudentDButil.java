@@ -45,7 +45,7 @@ public class StudentDButil
 //insert monthly salary to the database####################################################################################
 	public static boolean insertSal(String teacherID,String amount,String description,String type){
 		
-		boolean isSuccess= false;
+		isSuccess= false;
 		
 		try {
 			con = DBconnect.getConnection();

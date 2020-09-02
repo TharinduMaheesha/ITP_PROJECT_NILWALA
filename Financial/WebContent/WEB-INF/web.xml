@@ -14,5 +14,17 @@
 <servlet-name>cart</servlet-name>
 <url-pattern>/user</url-pattern>
 </servlet-mapping>
+
+
+
+<servlet>
+<servlet-name>salary</servlet-name>
+<servlet-class>com.servlet.salaryUpdateServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>salary</servlet-name>
+<url-pattern>/up</url-pattern>
+</servlet-mapping>
 		
 </web-app>
