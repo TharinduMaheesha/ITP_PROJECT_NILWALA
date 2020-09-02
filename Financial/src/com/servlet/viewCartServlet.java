@@ -20,10 +20,10 @@ public class viewCartServlet extends HttpServlet {
       
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-		String StudentID = request.getParameter("StudentID");			
+		String studentID = request.getParameter("studentID");			
 		
 		try {
-			List<Student> cartDetails = StudentDButil.viewCart(StudentID);
+			List<Student> cartDetails = StudentDButil.viewCart(studentID);
 			request.setAttribute("cartDetails", cartDetails);
 		}
 		catch(Exception e) {

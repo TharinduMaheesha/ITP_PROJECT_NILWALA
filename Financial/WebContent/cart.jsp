@@ -15,31 +15,25 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 <center><h5>Payment in progress</h5></center>
 <center><div class="spinner-grow text-primary" role="status"><span class="sr-only">Loading...</span></div></center>
 
-<div class="progress"><div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div></div><br><br>
+<div class="progress"><div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+ aria-valuemax="100">25%</div></div><br><br>
 
 <div class="shadow-lg p-3 mb-5 bg-white rounded">
 <form>
 
-<c:forEach var="stu" items="${cartDetails}"> 
-${stu.level};
-${stu.name};
-</c:forEach>
 
-		<table class="table table-hover table-dark" class="kl" >
-		  <thead>
-		    <tr>
-		      <th scope="col" class="text-center">Level</th>
-		      <th scope="col" class="text-center">Subject</th>
-		    </tr>
-		  </thead>
-		  
-		  <tbody>
-		    <tr>
-		      <td></td>
-		      <td></td>
-		    </tr>
-		  </tbody>
-		
+
+
+
+		<table class="table table-hover table-dark" >
+				<c:forEach var="stu" items="${cartDetails}"> 
+				
+				    <tr>
+				      <td>${stu.level}</td>
+				      <td>${stu.name}</td>
+				    </tr>
+						
+				</c:forEach>
 		</table>
 		<center><input type ="submit" value="Pay Now"  class="btn btn-primary btn-lg"></center>
 		

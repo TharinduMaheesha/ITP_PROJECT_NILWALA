@@ -16,19 +16,19 @@ public class StudentDButil
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
 	 
-	public static List<Student> viewCart(String StudentID)
+	public static List<Student> viewCart(String studentID)
 	{
 		ArrayList<Student> stu  = new ArrayList<>();
 		
 		try {
 			con = DBconnect.getConnection();
 			stmt = con.createStatement();
-			String sql = "select level,name from subject s,studentsubscription t where s.subjectCode=t.subjectCode AND studentID='"+StudentID+"' ";
+			String sql = "select level,name from subject s,studentsubscription t where s.subjectCode=t.subjectCode and studentID='"+studentID+"' ";
 			rs = stmt.executeQuery(sql);
 			
-			while(rs.next()) {
-				String level=rs.getString(1);
-				String name=rs.getString(2);
+			if(rs.next()) {
+				String level=rs.getString(2);
+				String name=rs.getString(3);
 				
 				Student st = new Student(level,name);
 				stu.add(st);
