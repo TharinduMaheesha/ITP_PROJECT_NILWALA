@@ -28,6 +28,45 @@
   </servlet-mapping>
   
   <servlet>
+  	<servlet-name>TM_UpdateLessonSer</servlet-name>
+  	<servlet-class>com.servlet.TM_UpdateLessonSer</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_UpdateLessonSer</servlet-name>
+  	<url-pattern>/TM_UpdateLessonSer</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  	<servlet-name>TM_DeleteLessonSer</servlet-name>
+  	<servlet-class>com.servlet.TM_DeleteLessonSer</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_DeleteLessonSer</servlet-name>
+  	<url-pattern>/TM_DeleteLessonSer</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>TM_TeViewLessonSer</servlet-name>
+  	<servlet-class>com.servlet.TM_TeViewLessonSer</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_TeViewLessonSer</servlet-name>
+  	<url-pattern>/TM_TeViewLessonSer</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>TM_StudentLoginSer</servlet-name>
+  	<servlet-class>com.servlet.TM_StudentLoginSer</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_StudentLoginSer</servlet-name>
+  	<url-pattern>/TM_StudentLoginSer</url-pattern>
+  </servlet-mapping>
+  <servlet>
   	<servlet-name>TM_AddLessonServlet</servlet-name>
   	<servlet-class>com.servlet.TM_AddLessonServlet</servlet-class>
   </servlet>
@@ -37,5 +76,15 @@
   	<url-pattern>/TM_AddLessonServlet</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+  	<servlet-name>TM_RetriveAddedDetailsUpPageSer</servlet-name>
+  	<servlet-class>com.servlet.TM_RetriveAddedDetailsUpPageSer</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_RetriveAddedDetailsUpPageSer</servlet-name>
+  	<url-pattern>/TM_RetriveAddedDetailsUpPageSer</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
 </element>

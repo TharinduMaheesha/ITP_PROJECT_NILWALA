@@ -14,7 +14,7 @@
 
 <div>
 		<ul class="breadcrumb"><!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home<b></b></a></li>
+		  <li><a href="#"><b><b></b></a></li>
 		</ul>
 	</div>
 	

@@ -11,48 +11,42 @@
 <title>Insert title here</title>
 </head>
 <body>
-			<%
-			String teacher_id = request.getParameter("teacherid");
-			String subject_code = request.getParameter("subjectcode");
-			String lesson_no = request.getParameter("lessonno");
-			String lesson_name = request.getParameter("lessonname");
-			String material = request.getParameter("material");
-			%>
-			
-			<div style = " max-width: 500px;  margin: auto;" class = "background"  class = "transbox">
+	<div style = " max-width: 700px;  margin: auto;" class = "background"  class = "transbox" >
+	<table style = " align : center;">
+	<div class="table-responsive">
 	
-			<table style = " max-width: 500px;  margin: auto;">
-				<tr>
-					<td>Your ID</td>
-					<td><input name="type" value="<%= teacher_id %>" readonly/></td>
-				</tr>
-				<tr>
-					<td>Subject Code</td>
-					<td><input  name="pid" value="<%= subject_code %>" readonly/></td>
-				</tr>
-					<tr>
-					<td>Lesson Number</td>
-					<td><input  name="pid" value="<%= lesson_no %>" readonly/></td>
-				</tr>
-				<tr>
-					<td>Topic Of The Lesson</td>
-					<td><input  name="fn" value="<%= lesson_name %>"readonly/></td>
-				</tr>
-				<tr>
-					<td>Material</td>
-					<td><input name="ln" value="<%= material %>"readonly/></td>
-				</tr>
-	
-			</table>	
+				<c:forEach var="tea" items="${teaDetails}">
+				<c:set var="teacherid" value="${tea.teacher_id}"/>
+				<c:set var="subjectcode" value="${tea.subject_code}"/>
+				<c:set var="lessonno" value="${tea.lesson_no}"/>
+				<c:set var="lessonname" value="${tea.lesson_name}"/>
+				
+			<table class="table">
+			  <thead class="thead-dark">
+			    <tr>
+			      
+			      <th scope="col">Lesson Number</th>
+			      <th scope="col">Subject Code</th>
+			      <th scope="col">Lesson Number</th>
+			      <th scope="col">Lesson Topic</th>
+			   
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      
+			      <td>${tea.lesson_no}</td>
+			      <td>${tea.subject_code}</td>
+			      <td>${tea.lesson_no}</td>
+			      <td>${tea.lesson_name}</td>
+			     
+			    </tr>
+		
+			  </tbody>
+			</table>
+			</c:forEach>
 			</div>
-				<c:url value="TM_TeacherViewLesson.jsp" var="addupdate">
-				<c:param name="teacher_id" value="${teacherid}"/>
-				<c:param name="subjectcode" value="${subject_code}"/>
-				<c:param name="lesson_no" value="${lesson_no}"/>
-				<c:param name="lesson_name" value="${lessonname}"/>
-				<c:param name="material" value="${material}"/>
-				</c:url>
-			
+		
 			<a href ="${addupdate}">
 			<center><input type = "button" name = "Update" value ="View Lesson" class = "btta" class = "list-button">
 			

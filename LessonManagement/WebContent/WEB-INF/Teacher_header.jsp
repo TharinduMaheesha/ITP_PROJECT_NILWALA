@@ -24,6 +24,8 @@
   font-size: 17px;
 }
 
+
+
 /* Add an active class to highlight the current page */
 .active {
   background-color: #4CAF50;
@@ -235,9 +237,10 @@ input[type=submit]:hover {
 
 .container {
   border-radius: 5px;
-  background-color: #BEFAD5;
+  background-color: #D7DBDD  ;
   padding: 50px;
 }
+
 .btn1 {
   background-color: #28B463;
   border: none;

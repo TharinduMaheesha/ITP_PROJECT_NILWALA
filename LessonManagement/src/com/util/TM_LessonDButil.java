@@ -122,6 +122,57 @@ public class TM_LessonDButil {
 			
 			return isSuccess;
 		}
+		
+		 public static boolean updatelesson(String teacher_id,String subject_code , String lesson_no, String lesson_name) {
+		    	
+				try {
+		    		
+		    		con = TM_DBconnect.getConnection();
+		    		stmt = con.createStatement();
+		    		String sql = "update lesson set teacher_id='"+teacher_id+"',subject_code = '"+subject_code+"',lesson_no='"+lesson_no+"',lesson_name='"+lesson_name+"'"
+		    				+ "where subject_code='"+subject_code+"' and teacher_id = '"+teacher_id+"' and lesson_no = '"+lesson_no+"'";
+		    		int rs = stmt.executeUpdate(sql);
+		    		System.out.println(rs);
+		    		if(rs > 0) {
+		    			isSuccess = true;
+		    		}
+		    		else {
+		    			isSuccess = false;
+		    		}
+		    		
+		    	}
+		    	catch(Exception e) {
+		    		e.printStackTrace();
+		    	}
+		    	
+		    	return isSuccess;
+		    }
+		 public static boolean updatelessonM(String teacher_id,String subject_code , String lesson_no, String material) {
+		    	
+				try {
+		    		
+		    		con = TM_DBconnect.getConnection();
+		    		stmt = con.createStatement();
+		    		String sql = "update lesson_material set teacher_id='"+teacher_id+"',subject_code = '"+subject_code+"',lesson_no='"+lesson_no+"',material='"+material+"'"
+		    				+ "where subject_code='"+subject_code+"' and teacher_id = '"+teacher_id+"' and lesson_no = '"+lesson_no+"'";
+		    		int rs = stmt.executeUpdate(sql);
+		    		
+		    		if(rs > 0) {
+		    			isSuccess = true;
+		    		}
+		    		else {
+		    			isSuccess = false;
+		    		}
+		    		
+		    	}
+		    	catch(Exception e) {
+		    		e.printStackTrace();
+		    	}
+		    	
+		    	return isSuccess;
+		    }
+		 
+		 
 			public static List<TM_Lesson> getLessonDetails(String subject_code){
 			    	
 			    	ArrayList<TM_Lesson> ps = new ArrayList<>();

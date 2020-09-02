@@ -18,12 +18,13 @@
 		</ul>
 	</div>
 
-   <center><p class="font-italic" class = "text-success"><b>Successfullly Inset to the database</p></b> </center>
+   <center><p class="font-italic" class = "text-success"><b>Wellcome to the Lessons!!!</p></b> </center>
    
-			<div style = " max-width: 700px;  margin: auto;" class = "background"  class = "transbox" >
+			<div style = " max-width: 750px;  margin: auto;" class = "background"  class = "transbox" >
 			<table style = " align : center;">
+			<form action ="TM_RetriveAddedDetailsUpPageSer" method = "POST" class="modal-content" required>
 			
-		<%
+			<%
 			String teacher_id = request.getParameter("teacherid");
 			String subject_code = request.getParameter("subjectcode");
 			String lesson_no = request.getParameter("lessonno");
@@ -32,14 +33,13 @@
 			%>
 			
 			
-			  <div class="container">
-			  <form action="/action_page.php">
+			  <div class="container" style = "Background-image : url(file:///C:/Users/Sandamali/git/ITP_PROJECT_NILWALA/LessonManagement/WebContent/images/ss.jpg); Background-size : 1300px 950px " >
 			  <div class="row">
 			    <div class="col-25">
 			      <label for="fname"><b>Your ID</label>
 			    </div>
 			    <div class="col-75">
-			      <input type="text" id="teacherid"  value="<%= teacher_id %>"  readonly/>
+			      <input type="text" id="teacherid" name="teacherid" value="<%= teacher_id %>"  readonly/>
 			    </div>
 			  </div>
 			  <div class="row">
@@ -47,7 +47,7 @@
 			      <label for="lname">Subject Code</label>
 			    </div>
 			    <div class="col-75">
-			      <input type="text" id="lname" name="lastname" value="<%= subject_code %>" readonly/>
+			      <input type="text" id="lname" name="subjectcode" value="<%= subject_code %>" readonly/>
 			    </div>
 			  </div>
 	
@@ -56,7 +56,7 @@
 			      <label for="subject">Lesson Number</label>
 			    </div>
 			    <div class="col-75">
-			      <input type="text" id="lname" name="lastname"    value="<%= lesson_no %>" readonly>
+			      <input type="text" id="lname" name="lessonno"    value="<%= lesson_no %>" readonly>
 			    </div>
 			  </div>
 			    <div class="row">
@@ -64,7 +64,7 @@
 			      <label for="lname">Topic Of The Lesson</label>
 			    </div>
 			    <div class="col-75">
-			      <input type="text" id="lname" name="lastname" value="<%= lesson_name %>" readonly/>
+			      <input type="text" id="lname" name="lessonname" value="<%= lesson_name %>" readonly/>
 			    </div>
 			  </div>
 			  
@@ -73,28 +73,14 @@
 			      <label for="lname">Materials Of The Lesson</b></label>
 			    </div>
 			    <div class="col-75">
-			      <input type="text" id="lname" name="lastname" style="height:200px"  value="<%= material %>" readonly/>
+			      <input type="text" id="lname" name="material" style="height:200px"  value="<%= material %>" readonly/>
 			    </div>
 		
-			  </form>
-			</div><br><br>
-				<c:set var="teacherid" value="${tea.teacher_id}"/>
-				<c:set var="subjectcode" value="${tea.subject_code}"/>
-				<c:set var="lessonno" value="${tea.lesson_no}"/>
-				<c:set var="lessonname" value="${tea.lesson_name}"/>
-				<c:set var="material" value="${tea.material}"/>
-				
-				<c:url value="TM_UpdateLesson.jsp" var="addupdate">
-				<c:param name="teacherid" value="${teacher_id}"/>
-				<c:param name="subjectcode" value="${subject_code}"/>
-				<c:param name="lessonno" value="${lesson_no}"/>
-				<c:param name="lessonname" value="${lesson_name}"/>
-				<c:param name="material" value="${material}"/>
-				
-				</c:url>
-			<a href ="${addupdate}">
+		
+			  
+			
 			<center> <button  class="btn1"><i class="fa fa-bars"></i><b>Update The Lesson</b></button>
-			</a>
+			  </form>
 			<button class="btn1"><i class="fa fa-trash"></i><b>Delete The Lesson</b> </button></center>	
 			</div>
 	
