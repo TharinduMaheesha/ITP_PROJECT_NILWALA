@@ -6,12 +6,12 @@
 		id="WebApp_ID" version="3.0">
 
 <servlet>
-<servlet-name>cart</servlet-name>
+<servlet-name>viewCartServlet</servlet-name>
 <servlet-class>com.servlet.viewCartServlet</servlet-class>
 </servlet>
 		
 <servlet-mapping>
-<servlet-name>cart</servlet-name>
+<servlet-name>viewCartServlet</servlet-name>
 <url-pattern>/user</url-pattern>
 </servlet-mapping>
 

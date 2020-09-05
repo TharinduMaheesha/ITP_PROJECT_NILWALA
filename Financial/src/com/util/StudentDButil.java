@@ -16,22 +16,24 @@ public class StudentDButil
 	private static ResultSet rs = null;
 	 
 //view cart details from the database####################################################################################	
-	public static List<Student> viewCart(String studentID)
+	public static List<Student> viewCart(String stuID)
 	{
 		ArrayList<Student> stu  = new ArrayList<>();
 		
 		try {
 			con = DBconnect.getConnection();
 			stmt = con.createStatement();
-			String sql = "select s.subjectCode,s.name,s.level from subject s ,studentsubscription t where s.subjectCode=t.subjectCode and studentID='"+studentID+"'";
+			//String sql = "select s.subjectCode,s.name,s.level from subject s ,studentsubscription t where s.subjectCode=t.subjectCode and studentID='"+stuID+"'";
+			String sql = "select * from student where studentID='"+stuID+"'";
 			rs = stmt.executeQuery(sql);
 			
 			if(rs.next()){
-				String subjectCode=rs.getString(1);
-				String name=rs.getString(2);
-				String level=rs.getString(3);
+				String studentID = rs.getString(1);
+				String subjectCode = rs.getString(2);
+				String name = rs.getString(3);
+				String level = rs.getString(4);
 				
-				Student st = new Student(subjectCode,name,level);
+				Student st = new Student(studentID,subjectCode,name,level);
 				stu.add(st);
 			}
 		}

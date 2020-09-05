@@ -14,23 +14,17 @@ import com.student.Student;
 import com.util.StudentDButil;
 
 
-@WebServlet("/eventServlet")
+@WebServlet("/viewCartServlet")
 public class viewCartServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
       
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-		String studentID = request.getParameter("ID");			
-		
-		try {
-			List<Student> cartDetails=StudentDButil.viewCart(studentID);
+		String stuID = request.getParameter("sid");			
+	
+			List<Student> cartDetails=StudentDButil.viewCart(stuID);
 			request.setAttribute("cartDetails",cartDetails);
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-		
-			
+	
 			RequestDispatcher dis = request.getRequestDispatcher("cart.jsp");		 
 			dis.forward(request,response);
 	

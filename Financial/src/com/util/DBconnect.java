@@ -4,9 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DBconnect {
-		private static String url="jdbc:mysql://localhost:3306/finance";
+		private static String url="jdbc:mysql://localhost:3306/event";
 		private static String user="root";
-		private static String pass="";
+		private static String pass=" ";
 		private static Connection con;
 			
 		public static Connection getConnection()
