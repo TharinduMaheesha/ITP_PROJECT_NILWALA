@@ -15,7 +15,7 @@
   padding: 15px;
   background-color: #ddffdd;
   width : 850px;
-  height :500px;
+  height :550px;
   text-align:left;
   border: solid;
   position: absolute;
@@ -67,7 +67,7 @@
   <div class="unsuccess">
          <center><span style='font-size:100px;'>&#128577;</span></center>
          <center><h3>SORRY! <br>Your schedule is not created successfully...!</h3><br><br><br></center>
-         <center><p><strong>Error:  </strong><br>May be your previous week's schedule is already in the system .<br><br><Strong>Tip:</strong><br>Click -> "Back"/"Change scheduled session details"/         and Enter yout subject code there and delete your session details,           and try again.</Striong></p></center>
+         <center><p><strong>Error:  </strong><br> May be <br>1.Your previous week's schedule is already in the system .<br>2.The date you entered is not in proper format.<br>3)All the details are required to be filled.<br><br><Strong>Tips:</strong><br> 1.Click -> "Back"/"Change scheduled session details"/         and Enter yout subject code there and delete your session details,           and try again.<br>2.Check the format and re enter your details<br>(eg:1.Grade cannot have any letters 2.date shoud be in proper format 3.All the details are required to be filled.)</Striong></p></center>
   </div>
 
 
