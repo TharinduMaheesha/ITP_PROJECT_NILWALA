@@ -58,7 +58,7 @@ border-radius:10px;
  
  .wrnmassage{
  position:relative;
- color: red;
+ color:  #2eb82e;
  font-size: 18px;
  
  
@@ -82,7 +82,7 @@ border-radius:10px;
 	
 	
 	<center><div class="wrnmassage">
-	<i class="material-icons" style="font-size:30px;color:red">error</i>
+	<i class="material-icons" style="font-size:30px;color: red">error</i>
 	<label><b>You must delete your previous week's schedule to create a new schedule...!!!<b></label><br>
 	</div><br><br></center>
 

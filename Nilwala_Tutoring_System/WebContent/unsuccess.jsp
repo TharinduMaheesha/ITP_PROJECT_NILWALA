@@ -75,7 +75,7 @@
 
    <center><div class = "but3">
      
-        <a href="scheduleInsert.jsp">
+        <a href="ScheduleHome.jsp">
         <button class="success"><span> <- Back </span></button>
          </a><br>
     </div></center>
