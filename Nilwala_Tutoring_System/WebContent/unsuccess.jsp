@@ -59,26 +59,26 @@
 
 	<div>
 		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Shedule</b></a></li>		  
+		  <li><a href="ScheduleHome.jsp"><b>Shedule</b></a></li>		  
 		</ul>
 	</div>
 	<hr>
 
-<div class="unsuccess">
-<center><span style='font-size:100px;'>&#128577;</span></center>
-<center><h3>SORRY! <br>Your schedule is not created successfully...!</h3><br><br><br></center>
-<center><p><strong>Error:  </strong><br>May be your previous week's schedule is already in the system .<br><br><Strong>Tip:</strong><br>Click -> "Back"/"Change scheduled session details"/         and Enter yout subject code there and delete your session details,           and try again.</Striong></p></center>
-</div>
+  <div class="unsuccess">
+         <center><span style='font-size:100px;'>&#128577;</span></center>
+         <center><h3>SORRY! <br>Your schedule is not created successfully...!</h3><br><br><br></center>
+         <center><p><strong>Error:  </strong><br>May be your previous week's schedule is already in the system .<br><br><Strong>Tip:</strong><br>Click -> "Back"/"Change scheduled session details"/         and Enter yout subject code there and delete your session details,           and try again.</Striong></p></center>
+  </div>
 
 
 
 
-<center><div class = "but3">
+   <center><div class = "but3">
      
-     <a href="scheduleInsert.jsp">
-    <button class="success"><span> <- Back </span></button>
-     </a><br>
-       </div></center>
+        <a href="scheduleInsert.jsp">
+        <button class="success"><span> <- Back </span></button>
+         </a><br>
+    </div></center>
 
 </body>
 </html>

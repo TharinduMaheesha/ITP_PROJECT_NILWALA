@@ -114,16 +114,16 @@ background-color:#C0C0C0;
 
 	<div>
 		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Shedule</b></a></li>		  
+		  <li><a href="ScheduleHome.jsp"><b>Shedule</b></a></li>		  
 		</ul>
 	</div>
 	<br>
 	<hr>
 
 <div class="success">
-<center><span style='font-size:50px;'>&#128578;</span></center><br>
-<center><h3>SUCCESSFULL...! <br>Your schedule is created successfully!</h3><br><br><br></center>
-<hr>
+     <center><span style='font-size:50px;'>&#128578;</span></center><br>
+     <center><h3>SUCCESSFULL...! <br>Your schedule is created successfully!</h3><br><br><br></center>
+     <hr>
 </div>
 
 
@@ -131,25 +131,22 @@ background-color:#C0C0C0;
 
 
 <div class = "getScheduleDetails">
-<form action="log" method="post">
+   <form action="log" method="post">
 
-<center><label for="subjectCode"><b>If you want to edit/delete schedule details or check whether the details are added correctly,<br><br><strong>Enter the subject code and click this button,<strong></strong></b></label><br><br></center>
-    <center><input type="text" placeholder="Enter your subject code" name="sid" required><br></center><br>
+       <center><label for="subjectCode"><b>If you want to edit/delete schedule details or check whether the details were added correctly,<br><br><strong>Enter the subject code and click this button,<strong></strong></b></label><br><br></center>
+       <center><input type="text" placeholder="Enter your subject code" name="sid" required><br></center><br>
 
-
-
-   <center><input type="submit" name="submit" value="View session details" class="loginButton"></center><br>
-
-<br>
-</form>
+       <center><input type="submit" name="submit" value="View session details" class="loginButton"></center><br>
+           <br>
+  </form>
 
 </div>
 
 
 
 <center><a href="ScheduleHome.jsp">
-      <button class="backBtn"><span>Back</span></button>
-     </a></center><br>
+             <button class="backBtn"><span>Back</span></button>
+         </a></center><br>
      
 
 <div class="successpageHr">

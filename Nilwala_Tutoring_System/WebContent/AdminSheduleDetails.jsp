@@ -29,6 +29,16 @@ top:220px;
 
 }
 
+.Admchangeschedule{
+
+color: red;
+font-size: 20px;
+text-decoration: underline;
+
+
+}
+
+
 
 
 </style>
@@ -38,7 +48,7 @@ top:220px;
 <link rel = "stylesheet"
    type = "text/css"
    href = "ScheduleManagement.css" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    
    
 </head>
@@ -53,6 +63,12 @@ top:220px;
 	</div>
 	<hr>
 <br><br>
+
+<center><div class = "Admchangeschedule">
+	<label>-Schedule of this week...-</label>
+	</div></center><br>
+
+
  <center><table type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
  
  <table id="myTable">
@@ -105,7 +121,7 @@ top:220px;
      </tr>
      
      <tr>
-     <td>Class date :</td> 
+     <td>Class conducting date :</td> 
      <td>${tea.class_date}</td>
      </tr>
      

@@ -29,6 +29,16 @@ top:220px;
 
 }
 
+.Stuchangeschedule{
+
+color: blue;
+font-size: 20px;
+text-decoration: underline;
+
+
+}
+
+
 
 
 </style>
@@ -48,11 +58,17 @@ top:220px;
 
 <div>
 		<ul class="breadcrumb"><!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home<b></b></a></li>
+		  <li><a href="ScheduleHome.jsp"><b>Schdule<b></b></a></li>
 		</ul>
 	</div>
 	<hr>
 <br><br>
+
+<center><div class = "Stuchangeschedule">
+	<label>-Schedule of this week...-</label>
+	</div></center><br>
+
+
  <center><table type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
  
  <table id="myTable">

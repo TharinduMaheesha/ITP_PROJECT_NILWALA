@@ -43,6 +43,24 @@
 .success h3{
   font-size: 20px;
 }
+
+
+.backBtn{
+
+border: none;
+background-color:#C0C0C0;
+  color:black;
+  padding: 7px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-style: solid;
+  border-color: black;
+  position:relative;
+  top:280px;
+  left:-560px;
+
+
+}
  
 
 </style>
@@ -56,7 +74,7 @@
 
 	<div>
 		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Shedule</b></a></li>		  
+		  <li><a href="ScheduleHome.jsp"><b>Shedule</b></a></li>		  
 		</ul>
 	</div>
 	<br>
@@ -64,14 +82,19 @@
 
 
 <div class="success">
-<center><span style='font-size:50px;'>&#128578;</span></center><br>
-<center><h3>SUCCESSFULL...! <br>Your schedule was successfully deleted!</h3><br><br><br>
-
-</center>
+        <center><span style='font-size:50px;'>&#128578;</span></center><br>
+        <center><h3>SUCCESSFULL...! <br>Your schedule were successfully deleted!</h3><br><br><br></center>
 
 
-<hr>
+   <hr>
 </div>
+
+
+<center><a href="ScheduleHome.jsp">
+             <button class="backBtn"><span>Back</span></button>
+       </a></center><br>
+     
+
 
   
   

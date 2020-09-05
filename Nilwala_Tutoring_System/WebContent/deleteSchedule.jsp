@@ -18,7 +18,7 @@
 
 	<div>
 		<ul class="breadcrumb"><!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home<b></b></a></li>
+		  <li><a href="ScheduleHome.jsp"><b>Shedule<b></b></a></li>
 		</ul>
 	</div>
 	<hr>
@@ -38,10 +38,10 @@
   
    
     <center><form action="delete" method="post">
-     <div class="Schedule-container2">
-	<h3>Delete my Schedule..</h3>
-	<p>You can't change any detail here..!Click delete button to delete your details</p>
-	<hr>
+         <div class="Schedule-container2">
+	          <h3>Delete my Schedule..</h3>
+	          <p>You can't change any detail here..!Click delete button to delete your details</p>
+	             <hr>
 	
 	   <label for="subjectid"><b>Subject Id:</b></label><br>
        <input type="text" name="schid" value="<%= schid %>" readonly><br>
@@ -73,7 +73,7 @@
        
        
        
-        <label for="classdate"><b>Class date:</b></label><br>
+        <label for="classdate"><b>Class conducting date:</b></label><br>
        <input type="date" name="classdate" value="<%= classdate %>" readonly><br><br>
        
        
@@ -84,10 +84,10 @@
        <hr>
        
        
-       <center><input type="submit" name="submit" value="Delete Session details" class="addbtn"><br></center>
+     <center><input type="submit" name="submit" value="Delete Session details" class="addbtn"><br></center>
     
     
-    </form></center>
+   </form></center>
 
 
 

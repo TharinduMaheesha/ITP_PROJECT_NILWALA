@@ -65,6 +65,16 @@ form.loginSearch::after {
   display: table;
 }
 
+.changeschedule{
+
+color: green;
+font-size: 18px;
+text-decoration: underline;
+
+
+}
+
+
 </style>
 
 </head>
@@ -74,27 +84,32 @@ form.loginSearch::after {
 
 	<div>
 		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home</b></a></li>		  
+		  <li><a href="ScheduleHome.jsp"><b>Schedule</b></a></li>		  
 		</ul>
 	</div>
-	<hr>
+	<hr><br><br>
+	
+	<center><div class = "changeschedule">
+	            <label>-Change Scheduled Session Details-</label>
+	        </div></center>
+	
 	<div class = "StudentScheduleVeiwPage">
-<form action="log" method="post" class="loginSearch" style="margin:auto;max-width:600px">
+               <form action="log" method="post" class="loginSearch" style="margin:auto;max-width:600px">
 
-<center><label for="subjectCode"><b>Enter the subject code here to get the week's shedule of the relevent subject</strong></b></label><br><br><center>
-  <center><input type="text" placeholder="Enter the subject code...."  name="sid"  required><br></center><br>
+                      <center><label for="subjectCode"><b>Enter the subject code here to get the week's shedule of the relevent subject....</strong></b></label><br><br><center>
+                      <center><input type="text" placeholder="Enter the subject code...."  name="sid"  required><br></center><br>
   
 
-  <center><button type="submit" name="submit" ><i class="fa fa-search"></i></button></center><br>
+                       <center><button type="submit" name="submit" ><i class="fa fa-search"></i></button></center><br>
  
 
-</form>
-</div>
+               </form>
+  </div>
 
-<div class="StudentScheduleVeiwPageHr">
+  <div class="StudentScheduleVeiwPageHr">
 
-<hr>
-</div>
+         <hr>
+  </div>
 
 </body>
 </html>

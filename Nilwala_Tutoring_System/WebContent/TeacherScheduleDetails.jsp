@@ -44,6 +44,14 @@ border-radius:10px;
 
 
 }
+.Teachangeschedule{
+
+color: green;
+font-size: 20px;
+text-decoration: underline;
+
+
+}
 
 
 
@@ -70,12 +78,20 @@ border-radius:10px;
 		</ul>
 	</div>
 	<hr>
-<br><br>
+<br>
+
+<center><div class = "Teachangeschedule">
+	           <label>-Your schedule of this week...-</label>
+	    </div></center><br>
+	
+
+
+
  <center><table type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
  
  <table id="myTable">
   <tr class="header">
-    <th style="width:60%;">Details of your session...</th>
+    <th style="width:60%;">Schedule of this week......................!</th>
     <th style="width:40%;"></th>
 
      <c:forEach var="tea" items="${teaDetails}">
@@ -123,7 +139,7 @@ border-radius:10px;
      </tr>
      
      <tr>
-     <td>Class date :</td> 
+     <td>Class conducting date :</td> 
      <td>${tea.class_date}</td>
      </tr>
      
@@ -139,22 +155,13 @@ border-radius:10px;
 
 
 <div id = "downbutton">
-<center><button id ="downbutton"">downloard</button></center>
+          <center><button id ="downbutton"">downloard</button></center>
 </div>
 
 
 
 <hr>
 </div>
-
-
-
-    
-
-
-
-
-
 
 
 

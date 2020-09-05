@@ -3,15 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
-.StudentScheduleVeiwPage input[type=text], select, textarea {
-  width: 320px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
 
 .StudentScheduleVeiwPage{
  
@@ -19,7 +14,7 @@
  position:relative;
  left:260px;
  border-radius: 25px;
-  border: 3px solid #0000CD;
+  border: 3px solid blue;
   padding: 20px;
   width: 800px;
   height: 150px;
@@ -32,9 +27,54 @@ top:420px;
 
 }
 
+
+* {
+  box-sizing: border-box;
+}
+
+form.loginSearch input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.loginSearch button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  position:relative;
+  top : -36px;
+}
+
+form.loginSearch button:hover {
+  background: #0b7dda;
+}
+
+form.loginSearch::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.Studentchangeschedule{
+
+color: blue;
+font-size: 20px;
+text-decoration: underline;
+
+
+}
+
 </style>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+
 </head>
 <body>
 
@@ -42,48 +82,32 @@ top:420px;
 
 <div>
 		<ul class="breadcrumb"><!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home<b></b></a></li>
+		  <li><a href="ScheduleHome.jsp"><b>Shedule<b></b></a></li>
 		</ul>
 	</div>
-	<hr>
+	<hr><br>
+	
+	<center><div class = "Studentchangeschedule">
+	<label>-Get your Schedule...!-</label>
+	</div></center><br>
 	
 	<div class = "StudentScheduleVeiwPage">
-<form action="studentveiw" method="post">
+          <form action="studentveiw" method="post" class="loginSearch" style="margin:auto;max-width:600px">
 
-<center><label for="subjectCode"><b>Enter the subject code here to get the week's shedule of the relevent subject</strong></b></label><br><br></center>
-    <center><input type="text" placeholder="Enter your subject code" name="sid" required><br></center><br>
+                <center><label for="subjectCode"><b>Enter the subject code here to get the week's shedule of the relevent subject</strong></b></label><br><br><center>
+                <center><input type="text" placeholder="Enter the subject code...."  name="sid"  required><br></center><br>
+  
 
+                <center><button type="submit" name="submit" ><i class="fa fa-search"></i></button></center><br>
+ 
 
+          </form>
+   </div>
 
-   <center><input type="submit" name="submit" value="View session details" class="loginButton"></center><br>
+ <div class="StudentScheduleVeiwPageHr">
 
-<br>
-</form>
-
+   <hr>
 </div>
-	
-
-<div class="StudentScheduleVeiwPageHr">
-
-<hr>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>

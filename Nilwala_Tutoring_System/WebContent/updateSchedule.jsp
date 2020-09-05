@@ -18,7 +18,7 @@
 
 	<div>
 		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home</b></a></li>		  
+		  <li><a href="ScheduleHome.jsp"><b>Home</b></a></li>		  
 		</ul>
 	</div>
 	<br>
@@ -37,50 +37,49 @@
    %>
    
   
- 
-    <center><form action="update" method="post">
+ <center><form action="update" method="post">
    <div class="Schedule-container2">
-	<h3>Create a Schedule..</h3>
-	<p>Enter the details that you want to update...</p>
-	<hr>
+	 <h3>Create a Schedule..</h3>
+	   <p>Enter the details that you want to update...</p>
+	     <hr>
    
    
-      <label for="subjectid"><b>Schedule Id:</b>(You can't change schedule Id)</label><br>
-       <input type="text" placeholder="Enter the subject code" name="schid" value="<%= schid %>" readonly><br><br>
+           <label for="subjectid"><b>Schedule Id:</b>(You can't change schedule Id)</label><br>
+           <input type="text" placeholder="Enter the subject code" name="schid" value="<%= schid %>" readonly><br><br>
        
        
-       <label for="subjectcode"><b>Subject Code:</b></label><br>
-       <input type="text"  name="subjectcode" value="<%= subjectcode %>"><br><br>
+           <label for="subjectcode"><b>Subject Code:</b></label><br>
+           <input type="text"  name="subjectcode" value="<%= subjectcode %>"><br><br>
        
        
-       <label for="subjectcode"><b>Teacher's Id:</b></label>
-       <input type="text"  name="techerid" value="<%= teacherid %>"><br><br>
+           <label for="subjectcode"><b>Teacher's Id:</b></label>
+           <input type="text"  name="techerid" value="<%= teacherid %>"><br><br>
        
        
-       <label for="subjectcode"><b>Create Date:</b></label>
-       <input type="date"  name="createdate" value="<%= createdate %>"><br><br>
+            <label for="subjectcode"><b>Create Date:</b></label>
+            <input type="date"  name="createdate" value="<%= createdate %>"><br><br>
        
        
-       <label for="subjectcode"><b>Starting time:</b></label><br>
-       <input type="time" name="timefrom" value="<%= timefrom %>"><br><br>
+            <label for="subjectcode"><b>Starting time:</b></label><br>
+            <input type="time" name="timefrom" value="<%= timefrom %>"><br><br>
        
        
-      <label for="subjectcode"><b>Ending time:</b></label><br>
-       <input type="time" name="timeto" value="<%= timeto %>"><br><br>
+           <label for="subjectcode"><b>Ending time:</b></label><br>
+           <input type="time" name="timeto" value="<%= timeto %>"><br><br>
       
        
-      <label for="subjectcode"><b>Class date:</b></label><br>
-       <input type="date" name="classdate" value="<%= classdate %>"><br><br>
+          <label for="subjectcode"><b>Class date:</b></label><br>
+           <input type="date" name="classdate" value="<%= classdate %>"><br><br>
      
        
-       <label for="subjectcode"><b>Grade:</b></label><br>
-       <input type="text" name="grade" value="<%= grade %>"><br><br>
+          <label for="subjectcode"><b>Grade:</b></label><br>
+          <input type="text" name="grade" value="<%= grade %>"><br><br>
        
-        <hr>
+       <hr>
    
-    <center><input type="submit" name="submit" value="Update Session details" class="addbtn">
+     <center><input type="submit" name="submit" value="Update Session details" class="addbtn">
     </div><br><br>
-    </form></center>
+  </form></center>
     
 
 

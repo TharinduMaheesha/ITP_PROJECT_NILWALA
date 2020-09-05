@@ -88,6 +88,14 @@ color: green;
 font-size: 14px;
 
 }
+.changeschedule{
+
+color: green;
+font-size: 20px;
+text-decoration: underline;
+
+
+}
 
 </style>
 <meta charset="ISO-8859-1">
@@ -99,14 +107,18 @@ font-size: 14px;
 
 	<div>
 		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Shedule</b></a></li>		  
+		  <li><a href="ScheduleHome.jsp"><b>Shedule</b></a></li>		  
 		</ul>
 	</div>
-	<hr>
+	<hr><br><br>
+	
+	<center><div class = "changeschedule">
+	<label>-All scheduled sessoins for this week..-</label>
+	</div></center><br><br>
 	
 	
 <div id="VeiwAll">
-	<h3>All Sheduled sessions for this week..</h3>
+	
 <center><table class= "ViewAllTable">
 
   <tr>
@@ -218,14 +230,14 @@ font-size: 14px;
     <hr><br><br>
     </div>
 
-<center><a href="login.jsp">
-      <button class="getmyscheBtn"><span>Get my schedule</span></button>
-     </a></center><br> 
+<center><a href="TeacherScheduleView.jsp">
+                <button class="getmyscheBtn"><span>Get my schedule</span></button>
+        </a></center><br> 
      
      
      <center><a href="ScheduleHome.jsp">
-      <button class="backBtn"><span>Back</span></button>
-     </a></center><br>
+                  <button class="backBtn"><span>Back</span></button>
+             </a></center><br>
 
 
 

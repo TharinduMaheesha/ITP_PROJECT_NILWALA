@@ -86,37 +86,36 @@ top:100px;
 	<hr>
 	
 	
-
-	<div class = "scheduleHomeBox">
-	    <div class = "sheduleHomegif">
+<div class = "scheduleHomeBox">
+	       <div class = "sheduleHomegif">
 			<img src=".\images\schedule2.gif">
-		</div>
+		   </div>
 	
- <div class="SheduleHomeBtn">
-     <center><a href="scheduleInsert.jsp">
-    <button class="SheduleHomeBtns"><span><b>Create a new schedule </b></span></button>
-     </a></center><br>
+    <div class="SheduleHomeBtn">
+           <center><a href="scheduleInsert.jsp">
+                 <button class="SheduleHomeBtns"><span><b>Create a new schedule </b></span></button>
+            </a></center><br>
      
-     <center><a href="TeacherScheduleView.jsp">
-     <button class="SheduleHomeBtns"><span><b>Get my schedule details</b></span></button>
-     </a></center><br>
+           <center><a href="TeacherScheduleView.jsp">
+                  <button class="SheduleHomeBtns"><span><b>Get my schedule details</b></span></button>
+           </a></center><br>
      
-     <center><a href="login.jsp">
-     <button class="SheduleHomeBtns"><span><b>change my schedule details...</b> </span></button>
-     </a></center><br>
+           <center><a href="login.jsp">
+                  <button class="SheduleHomeBtns"><span><b>change my schedule details...</b> </span></button>
+          </a></center><br>
      
-     <center><a href="ViewAllSessionDetails.jsp">
-      <button class="SheduleHomeBtns"><span><b>View all scheduled session details...</b> </span></button>
-     </a></center><br>
+          <center><a href="ViewAllSessionDetails.jsp">
+                  <button class="SheduleHomeBtns"><span><b>View all scheduled session details...</b> </span></button>
+          </a></center><br>
      </div>
 </div>
 
 
 
-<div class="ScheduleHomeHr">
+        <div class="ScheduleHomeHr">
 
-<hr>
-</div>
+            <hr>
+        </div>
 
 
 

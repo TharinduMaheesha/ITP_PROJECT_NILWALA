@@ -49,7 +49,7 @@ top:220px;
 
 	<div>
 		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home</b></a></li>		  
+		  <li><a href="ScheduleHome.jsp"><b>Schedule</b></a></li>		  
 		</ul>
 	</div>
 	<hr>
@@ -106,7 +106,7 @@ top:220px;
      </tr>
      
      <tr>
-     <td>Class date :</td> 
+     <td>Class conducting date :</td> 
      <td>${tea.class_date}</td>
      </tr>
      
