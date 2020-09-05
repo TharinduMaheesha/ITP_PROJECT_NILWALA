@@ -55,6 +55,42 @@
   
   
   
+  <servlet>
+         <servlet-name>StudentVeiw</servlet-name>
+        <servlet-class>com.servlet.StudentVeiwServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+          <servlet-name>StudentVeiw</servlet-name>
+          <url-pattern>/studentveiw</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+         <servlet-name>AdminVeiw</servlet-name>
+        <servlet-class>com.servlet.AdminVeiwServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+          <servlet-name>AdminVeiw</servlet-name>
+          <url-pattern>/adminveiw</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  
+   <servlet>
+         <servlet-name>TeacherVeiw</servlet-name>
+        <servlet-class>com.servlet.TeacherViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+          <servlet-name>TeacherVeiw</servlet-name>
+          <url-pattern>/teacherveiw</url-pattern>
+  
+  </servlet-mapping>
+  
+  
   
   
 </web-app>

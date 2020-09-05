@@ -13,11 +13,14 @@
 <%@ include file="WEB-INF/Teacher_header.jsp" %>  
 
 	<div>
-		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home</b></a></li>		  
+		<ul class="breadcrumb"><!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
+		  <li><a href="#"><b>Home<b></b></a></li>
 		</ul>
 	</div>
 	<hr>
+	 
+	
+	
 </body>
 <footer></footer>
 </html>

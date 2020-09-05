@@ -18,7 +18,6 @@ background-color:#39C442;
   border-style: solid;
   border-color: black;
   border-radius: 12px;
-  
 
 
 }
@@ -45,11 +44,11 @@ top:220px;
 </head>
 <body>
 
-<%@ include file="WEB-INF/Teacher_header.jsp" %>  
+<%@ include file="WEB-INF/Student_header.jsp" %> 
 
-	<div>
-		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home</b></a></li>		  
+<div>
+		<ul class="breadcrumb"><!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
+		  <li><a href="#"><b>Home<b></b></a></li>
 		</ul>
 	</div>
 	<hr>
@@ -120,43 +119,11 @@ top:220px;
      
 
      
-     <c:url value="updateSchedule.jsp" var="schupdate"> 
-    <c:param name="schid" value="${schid}"/>
-    <c:param name="subjectcode" value="${subjectcode}"/>
-    <c:param name="teacherid" value="${teacherid}"/>
-    <c:param name="createdate" value="${datecreated}"/>
-    <c:param name="timefrom" value="${timefrom}"/>
-    <c:param name="timeto" value="${timeto}"/>
-    <c:param name="classdate" value="${classdate}"/>
-    <c:param name="grade" value="${grade}"/>
    
- 
-    </c:url>
-     
-     <a href="${schupdate}">
-     <input type="button" name="update" value="Update session details" class="sheduleaccount">
-     </a><br><br>
-     
-    <c:url value="deleteSchedule.jsp" var="schdelete"> 
-    <c:param name="schid" value="${schid}"/>
-    <c:param name="subjectcode" value="${subjectcode}"/>
-    <c:param name="teacherid" value="${teacherid}"/>
-    <c:param name="createdate" value="${datecreated}"/>
-    <c:param name="timefrom" value="${timefrom}"/>
-    <c:param name="timeto" value="${timeto}"/>
-    <c:param name="classdate" value="${classdate}"/>
-    <c:param name="grade" value="${grade}"/>
-     
-     </c:url>
-     
-     <a href="${schdelete}">
-     <input type="button" name="delete" value="Delete session details" class="sheduleaccount">
-     </a>
-     
-     <div class="scheduleaccoutPafeHr">
 
 <hr>
 </div>
 
 </body>
+
 </html>

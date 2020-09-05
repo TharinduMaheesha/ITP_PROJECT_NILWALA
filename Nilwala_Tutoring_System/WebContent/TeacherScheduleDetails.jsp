@@ -18,7 +18,6 @@ background-color:#39C442;
   border-style: solid;
   border-color: black;
   border-radius: 12px;
-  
 
 
 }
@@ -29,6 +28,24 @@ position:relative;
 top:220px;
 
 }
+.downbutton{
+border: none;
+background-color: blue;
+border-color:black;
+border-radius:10px;
+  color: black;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-style: solid;
+  border-color: black;
+  
+
+
+
+}
+
+
 
 
 
@@ -49,7 +66,7 @@ top:220px;
 
 	<div>
 		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home</b></a></li>		  
+		  <li><a href="#"><b>Shedule</b></a></li>		  
 		</ul>
 	</div>
 	<hr>
@@ -119,44 +136,28 @@ top:220px;
      </table><br>
      
 
-     
-     <c:url value="updateSchedule.jsp" var="schupdate"> 
-    <c:param name="schid" value="${schid}"/>
-    <c:param name="subjectcode" value="${subjectcode}"/>
-    <c:param name="teacherid" value="${teacherid}"/>
-    <c:param name="createdate" value="${datecreated}"/>
-    <c:param name="timefrom" value="${timefrom}"/>
-    <c:param name="timeto" value="${timeto}"/>
-    <c:param name="classdate" value="${classdate}"/>
-    <c:param name="grade" value="${grade}"/>
-   
- 
-    </c:url>
-     
-     <a href="${schupdate}">
-     <input type="button" name="update" value="Update session details" class="sheduleaccount">
-     </a><br><br>
-     
-    <c:url value="deleteSchedule.jsp" var="schdelete"> 
-    <c:param name="schid" value="${schid}"/>
-    <c:param name="subjectcode" value="${subjectcode}"/>
-    <c:param name="teacherid" value="${teacherid}"/>
-    <c:param name="createdate" value="${datecreated}"/>
-    <c:param name="timefrom" value="${timefrom}"/>
-    <c:param name="timeto" value="${timeto}"/>
-    <c:param name="classdate" value="${classdate}"/>
-    <c:param name="grade" value="${grade}"/>
-     
-     </c:url>
-     
-     <a href="${schdelete}">
-     <input type="button" name="delete" value="Delete session details" class="sheduleaccount">
-     </a>
-     
-     <div class="scheduleaccoutPafeHr">
+
+
+<div id = "downbutton">
+<center><button id ="downbutton"">downloard</button></center>
+</div>
+
+
 
 <hr>
 </div>
 
+
+
+    
+
+
+
+
+
+
+
+
 </body>
+
 </html>

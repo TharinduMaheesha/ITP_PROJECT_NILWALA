@@ -1,4 +1,4 @@
-package com.schedule;
+package com.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

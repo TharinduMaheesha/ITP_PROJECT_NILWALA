@@ -13,12 +13,17 @@ import javax.servlet.http.HttpServletResponse;
 import com.schedule.Teacher;
 import com.util.TeacherDBUtil;
 
-
-@WebServlet("/LoginServlet")
-public class LoginServlet extends HttpServlet {
+/**
+ * Servlet implementation class AdminVeiwServlet
+ */
+@WebServlet("/AdminVeiwServlet")
+public class AdminVeiwServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String subject_code = request.getParameter("sid");
 		
@@ -31,7 +36,7 @@ public class LoginServlet extends HttpServlet {
 			        e.printStackTrace();
 		}
 		
-		RequestDispatcher dis = request.getRequestDispatcher("scheduleaccount.jsp");
+		RequestDispatcher dis = request.getRequestDispatcher("AdminSheduleDetails.jsp");
 		dis.forward(request, response);
 		
 		
