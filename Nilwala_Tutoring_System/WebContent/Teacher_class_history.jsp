@@ -26,7 +26,20 @@
 	<hr>
 	
 	<input type="text" id="tm_myInput" onkeyup="myFunction()" placeholder="Search for subject name.." title="Type in a name">
-	
+	<%	
+
+			String user = (String)request.getAttribute("UserID");
+			ArrayList<SubjectClass> array = ClassControllerUtil.classHistory( user);
+			if(array.size() == 0){
+ %>
+   <div style = "width : 100% ; margin: auto ; background-color: #e3e3e3 ; margin-top: 12px; padding-bottom: 50px ; padding-top: 50px ; overflow-x:auto;">
+					<p style = "font-family: sans-serif; font-size: 20px ; text-align: center; color : black;"><b> There are no Classes to be displayed at the moment</b></p>
+			
+			</div>
+			
+			<br><br>
+			<%}
+			else{%>
 	
 	<div style = "width : 100% ; margin: auto ; background-color: #e3e3e3 ; margin-top: 12px; padding-bottom: 50px ; padding-top: 50px ; overflow-x:auto;">
 		<p style = "font-family: sans-serif; font-size: 20px ; text-align: center;"><b> Select a class to view details </b></p>
@@ -45,22 +58,27 @@
 				    
 				  </tr>
 <%
-		ArrayList<SubjectClass> array = ClassControllerUtil.classHistory();
-
+		
+		
 		for(SubjectClass sub  : array){
 			
 		
-%>
+			%>
+			
+			<form action="TeacherClassControllerServlet" method = "post">
 				  <tr>
 				    <td><b><%=sub.getId() %></b></td>
 				    <td><b><%=sub.getSubject() %></b></td>
 				    <td><b><%=sub.getGrade() %></b></td>
 				    <td><b><%=sub.getDate() %></b></td>
 				    <td><b><%=sub.getStart() %></b>	</td>
-				    <td><b><button>Select</button>
+				    				    <input type="hidden" name = "cid" value =<%=sub.getId() %>>
+				    				    <input type = "hidden" name = "uid" value=<%=user %>>
 				    
+				    <td><b><button type="submit" name = "saveClass" value = "history">Select</button>
 				  </tr>
-				  <%} %>
+				  </form>
+				  <%} }%>
 				</table>
 				
 				<script>

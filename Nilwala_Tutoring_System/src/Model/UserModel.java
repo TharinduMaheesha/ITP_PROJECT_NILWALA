@@ -2,7 +2,7 @@ package Model;
 
 public class UserModel {
 
-	String fname , lname, uname , email , phone , password , nic;
+	String fname , lname, uname , email , phone , password , nic , id;
 
 	public UserModel(String fname, String lname, String uname, String email, String phone, String password,
 			String nic) {
@@ -14,6 +14,10 @@ public class UserModel {
 		this.phone = phone;
 		this.password = password;
 		this.nic = nic;
+	}
+
+	public UserModel() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getFname() {
@@ -70,6 +74,14 @@ public class UserModel {
 
 	public void setNic(String nic) {
 		this.nic = nic;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 	

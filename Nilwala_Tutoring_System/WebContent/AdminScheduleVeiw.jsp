@@ -1,0 +1,143 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+.StudentScheduleVeiwPage{
+ 
+ top:50px;
+ position:relative;
+ left:260px;
+ border-radius: 25px;
+  border: 3px solid red;
+  padding: 20px;
+  width: 800px;
+  height: 150px;
+  
+}
+.StudentScheduleVeiwPageHr{
+
+position:relative;
+top:420px;
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+form.loginSearch input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.loginSearch button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  position:relative;
+  top : -36px;
+}
+
+form.loginSearch button:hover {
+  background: #0b7dda;
+}
+
+form.loginSearch::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.Adminchangeschedule{
+
+color: red;
+font-size: 20px;
+text-decoration: underline;
+
+
+}
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: white;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 25px;
+}
+ul.breadcrumb li+li:before {
+  padding: 10px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+ul.breadcrumb li a:hover {
+  color: red;
+  text-decoration: underline;
+}
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+hr.solid {
+  border-top: 3px solid red;
+}
+</style>
+
+</head>
+<body>
+
+<%@ include file="WEB-INF/Admin_header.jsp" %>  
+
+<div>
+		<ul class="breadcrumb"><!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
+		  <li><a href="#"><b>Home</b></a></li>
+		</ul>
+	</div>
+		          <hr class = "solid">
+<br>
+	
+	<div style = "background-color: #ddd ; height: 400px">
+		<center><div class = "Adminchangeschedule"><br>
+	               <label>-Get your Schedule...!-</label>
+	        </div></center><br><br>
+	
+	 <div class = "StudentScheduleVeiwPage">
+         <form action="adminveiw" method="post" class="loginSearch" style="margin:auto;max-width:600px">
+
+           <center><label for="subjectCode"><b>Enter the subject code here to get the week's shedule of the relevent subject...</strong></b></label><br><br><center>
+           <center><input type="text" placeholder="Enter the subject code...."  name="sid"  required><br></center><br>
+  
+
+           <center><button type="submit" name="submit" ><i class="fa fa-search"></i></button></center><br>
+ 
+
+         </form>
+    </div>
+
+       <div class="StudentScheduleVeiwPageHr">
+
+       </div></div>
+
+</body>
+</html>

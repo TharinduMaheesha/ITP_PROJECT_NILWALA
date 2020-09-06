@@ -21,3 +21,43 @@ ul.breadcrumb li a:hover {
   color: red;
   text-decoration: underline;
 }
+.ttt{
+	 background-color: #E74C3C ;
+	 color:white;
+	
+}
+
+#sm_tableArea
+{
+	width : 60%;
+	font-color : black;
+	font-weight: normal;
+	
+}
+
+#sm_tableArea td, #sm_tableArea th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+#sm_tableArea th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f94d48;
+  color: white;
+}
+.btn btn-danger{
+	  background-color: red; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-weight : bold;
+}

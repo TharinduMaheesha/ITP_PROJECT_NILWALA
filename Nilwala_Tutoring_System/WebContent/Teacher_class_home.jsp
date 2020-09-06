@@ -29,7 +29,8 @@
 				    <div class="tm_card">
 				      <p><i class="fa fa-check"></i></p>
 				      <%
-				      	String held = ClassControllerUtil.classCount();
+				      String iid = (String)request.getAttribute("UserID");
+				      	String held = ClassControllerUtil.classCount(iid);
 				      
 				      %>
 				      <h3><%=held %></h3>
@@ -39,9 +40,16 @@
 		</div>
 		<div class = "tm_button_container">
 			<div class="tm_btn-group1">
-				  <button onclick="window.location.href= 'Teacher_create_class.jsp'">Create Class</button><br>
-				  <button onclick="window.location.href= 'Teacher_available_classes.jsp'">Manage Classes</button><br>
-				  <button onclick="window.location.href= 'Teacher_class_history.jsp'">Class History</button><br>
+					<form action="TeacherClassControllerServlet" method="post">
+			
+				  <button type="submit" name = "saveClass" value="create">Create Class</button><br>
+				  <button type="submit" name = "saveClass" value="manage">Manage Classes</button><br>
+				  <button type="submit" name = "saveClass" value="historys">Class History</button><br>
+				  <input type ="hidden" name = "user" value=<%=iid %>>
+				  				  <input type ="hidden" name = "uid" value=<%=iid %>>
+				  
+				  			</form>
+				  
 			</div>
 		</div>
 	

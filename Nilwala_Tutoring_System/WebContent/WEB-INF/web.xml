@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<elment>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>Nilwala_Tutoring_System</display-name>
   <welcome-file-list>
@@ -9,4 +10,208 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>Servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+          <servlet-name>login</servlet-name>
+          <url-pattern>/log</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  <servlet>
+         <servlet-name>scheduleInsert</servlet-name>
+        <servlet-class>Servlet.ScheduleInsert</servlet-class>
+  </servlet>
+  <servlet-mapping>
+          <servlet-name>scheduleInsert</servlet-name>
+          <url-pattern>/insert</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  <servlet>
+         <servlet-name>UpdateSchedule</servlet-name>
+        <servlet-class>Servlet.UpdateScheduleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+          <servlet-name>UpdateSchedule</servlet-name>
+          <url-pattern>/update</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  <servlet>
+         <servlet-name>DeleteSchedule</servlet-name>
+        <servlet-class>Servlet.DeleteScheduleServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+          <servlet-name>DeleteSchedule</servlet-name>
+          <url-pattern>/delete</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+         <servlet-name>StudentVeiw</servlet-name>
+        <servlet-class>Servlet.StudentVeiwServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+          <servlet-name>StudentVeiw</servlet-name>
+          <url-pattern>/studentveiw</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+         <servlet-name>AdminVeiw</servlet-name>
+        <servlet-class>Servlet.AdminVeiwServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+          <servlet-name>AdminVeiw</servlet-name>
+          <url-pattern>/adminveiw</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  
+   <servlet>
+         <servlet-name>TeacherVeiw</servlet-name>
+        <servlet-class>Servlet.TeacherViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+          <servlet-name>TeacherVeiw</servlet-name>
+          <url-pattern>/teacherveiw</url-pattern>
+  
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>TM_AdminFetchData</servlet-name>
+  	<servlet-class>Servlet.TM_AdminFetchData</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_AdminFetchData</servlet-name>
+  	<url-pattern>/TM_AdminFetchData</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>TM_TeacherLoginSer</servlet-name>
+  	<servlet-class>Servlet.TM_TeacherLoginSer</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_TeacherLoginSer</servlet-name>
+  	<url-pattern>/TM_TeacherLoginSer</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>TM_UpdateLessonSer</servlet-name>
+  	<servlet-class>Servlet.TM_UpdateLessonSer</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_UpdateLessonSer</servlet-name>
+  	<url-pattern>/TM_UpdateLessonSer</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  	<servlet-name>TM_DeleteLessonSer</servlet-name>
+  	<servlet-class>Servlet.TM_DeleteLessonSer</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_DeleteLessonSer</servlet-name>
+  	<url-pattern>/TM_DeleteLessonSer</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>TM_TeViewLessonSer</servlet-name>
+  	<servlet-class>Servlet.TM_TeViewLessonSer</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_TeViewLessonSer</servlet-name>
+  	<url-pattern>/TM_TeViewLessonSer</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>TM_StudentLoginSer</servlet-name>
+  	<servlet-class>Servlet.TM_StudentLoginSer</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_StudentLoginSer</servlet-name>
+  	<url-pattern>/TM_StudentLoginSer</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>TM_AddLessonServlet</servlet-name>
+  	<servlet-class>Servlet.TM_AddLessonServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_AddLessonServlet</servlet-name>
+  	<url-pattern>/TM_AddLessonServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+  	<servlet-name>TM_RetriveAddedDetailsUpPageSer</servlet-name>
+  	<servlet-class>Servlet.TM_RetriveAddedDetailsUpPageSer</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_RetriveAddedDetailsUpPageSer</servlet-name>
+  	<url-pattern>/TM_RetriveAddedDetailsUpPageSer</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+<servlet-name>viewCartServlet</servlet-name>
+<servlet-class>com.servlet.viewCartServlet</servlet-class>
+</servlet>
+		
+<servlet-mapping>
+<servlet-name>viewCartServlet</servlet-name>
+<url-pattern>/user</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+<servlet-name>viewCartServlet</servlet-name>
+<servlet-class>Servlet.viewCartServlet</servlet-class>
+</servlet>
+		
+<servlet-mapping>
+<servlet-name>viewCartServlet</servlet-name>
+<url-pattern>/user</url-pattern>
+</servlet-mapping>
+
+
+
+<servlet>
+<servlet-name>AddSalarySev</servlet-name>
+<servlet-class>Servlet.AddSalarySev</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>AddSalarySev</servlet-name>
+<url-pattern>/AddSalarySev</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>EnterPayDeSev</servlet-name>
+<servlet-class>Servlet.EnterPayDeSev</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>EnterPayDeSev</servlet-name>
+<url-pattern>/EnterPayDeSev</url-pattern>
+</servlet-mapping>
 </web-app>
+</elment>

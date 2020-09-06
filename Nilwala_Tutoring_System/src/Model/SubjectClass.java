@@ -5,7 +5,7 @@ import java.sql.Blob;
 public class SubjectClass {
 
 	
-	private String level , grade , key , date , start , end , video , quiz , subject , id ;
+	private String level , grade , key , date , start , end , video , quiz , subject , id , fname , lname , tid ;
 	private Blob path;
 
 	public SubjectClass(String level, String grade, String key, String date, String start, String end , String subject) {
@@ -134,6 +134,43 @@ public class SubjectClass {
 	public void setPath(Blob path) {
 		this.path = path;
 	}
+
+
+
+	public String getFname() {
+		return fname;
+	}
+
+
+
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+
+
+
+	public String getLname() {
+		return lname;
+	}
+
+
+
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+
+
+
+	public String getTid() {
+		return tid;
+	}
+
+
+
+	public void setTid(String tid) {
+		this.tid = tid;
+	}
+	
 	
 	
 	

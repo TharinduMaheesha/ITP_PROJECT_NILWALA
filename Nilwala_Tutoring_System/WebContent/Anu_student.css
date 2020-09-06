@@ -1,0 +1,141 @@
+@charset "ISO-8859-1";
+
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: white;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 25px;
+}
+ul.breadcrumb li+li:before {
+  padding: 10px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+/*ul.breadcrumb li a:hover {
+  color: blue;
+  text-decoration: underline;
+}*/
+#nav_bar .active {
+    color:            blue;
+    background-color: #4f81bd;
+    text-decoration: underline;
+}
+
+/*My work*/
+
+.col-sm-6{
+	 text-align:center;	
+}
+
+.button {
+  font-family: 'Hammersmith One', sans-serif;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 35px;
+  background: #42A5F6;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  width: 250px;
+  height:130px;
+}
+.button:hover {
+  background: #0090FF;
+  color: #002699;
+}
+
+.button1 {
+  font-family: 'Hammersmith One', sans-serif;
+  color: white;
+  text-align: left;
+  border-radius: 8px;
+  font-size: 25px;
+  background: #42A5F6;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  width: 350px;
+}
+.button1:hover {
+  background: #0090FF;
+  color: #002699;
+}
+
+.button2 {
+  font-family: 'Hammersmith One', sans-serif;
+  color: white;
+  text-align: left;
+  border-radius: 8px;
+  font-size: 20px;
+  background:  #009900;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  width: 80px;
+  height:52.7px;
+}
+.button2:hover {
+  background:  #008000;
+  color:  black;
+}
+
+.button3 {
+  font-family: 'Hammersmith One', sans-serif;
+  color: white;
+  text-align: left;
+  border-radius: 8px;
+  font-size: 18px;
+  background:  #4d9900;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  width: 70px;
+  height:46.25px;
+}
+.button3:hover {
+  background:  #008000;
+  color:  black;
+}
+
+.button4 {
+  font-family: 'Hammersmith One', sans-serif;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 10px;
+  background: #42A5F6;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  width: 100px;
+  height:30px;
+}
+.button4:hover {
+  background: #0090FF;
+  color: #002699;
+}
+.pdf{
+  height: 30px;
+  width: 30px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

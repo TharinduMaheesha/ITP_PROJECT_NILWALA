@@ -28,11 +28,10 @@
 	
 	<hr class = "solid">
 	<br>
-	
-	
 <div class="tm_container">
 	<p style = "font-family: sans-serif; font-size: 20px ; text-align: center;"><b>Enter details to create your class</b></p>
   <form action="TeacherClassControllerServlet" method="POSt">
+  <input type = "hidden" name = "createUID" value=<%=(String)request.getAttribute("id")%>>
       <div class="tm_row">
       <div class="tm_col-25">
         <label >Level : </label>
@@ -84,7 +83,7 @@
         <label > Enrollment Key : </label>
       </div>
       <div class="tm_col-75">
-        <input type="text" name="ekey"  id = "ekey" placeholder="Enrollment Key..." required>
+        <input type="text" name="ekey"  id = "ekey" placeholder="Enrollment Key..." required maxlength="10">
       </div>
     </div>
     
@@ -93,7 +92,7 @@
         <label for="lname">Date</label>
       </div>
       <div class="tm_col-75">
-        <input type="date"  name="class_date" required>
+        <input type="date"  name="class_date" required min="" id= "datefield">
       </div>
     </div>
     
@@ -119,7 +118,22 @@
   </form>
 </div>
 
+	<script type="text/javascript">
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();
+	 if(dd<10){
+	        dd='0'+dd
+	    } 
+	    if(mm<10){
+	        mm='0'+mm
+	    } 
+
+	today = yyyy+'-'+mm+'-'+dd;
+	document.getElementById("datefield").setAttribute("min", today);
 	
+	</script>
 </body>
 <footer></footer>
 </html>

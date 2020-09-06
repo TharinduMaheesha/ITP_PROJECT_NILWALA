@@ -1,0 +1,57 @@
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: white;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 25px;
+}
+ul.breadcrumb li+li:before {
+  padding: 10px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+ul.breadcrumb li a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+div.main{
+	background-color: #D8D8D8;
+	ont-family: sans-serif;
+	font-size: 20px;
+	padding-left:100px;
+	padding-top:50px;
+	padding-bottom:20px;
+	
+}
+
+
+
+button.wmbut{
+  background-color: blue; 
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-top:20px;
+  
+}
+
+div.mkbutt{
+	
+	padding-left:750px;
+	padding-top:100px;
+	
+}
+

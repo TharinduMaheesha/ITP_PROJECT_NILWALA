@@ -9,7 +9,7 @@
 
 <style>/* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: black;
   overflow: hidden;
 }
 
@@ -23,12 +23,26 @@
   text-decoration: none;
   font-size: 17px;
 }
-
-/* Add an active class to highlight the current page */
-.active {
-  background-color: red;
+.btn{
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  background: none;
+  border: none;
+  outline: none;
+  
+}
+.btn:hover{
+background-color: red;
   color: white;
 }
+.btn:focus{
+  outline: none;
+
+}
+/* Add an active class to highlight the current page */
+
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
@@ -48,7 +62,7 @@
   outline: none;
   color: white;
   padding: 14px 16px;
-  background-color: inherit;
+  background-color: black;
   font-family: inherit;
   margin: 0;
 }
@@ -57,7 +71,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: black;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -66,8 +80,8 @@
 /* Style the links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: black;
-  padding: 12px 16px;
+  color: white;
+  padding: 18px 20px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -75,14 +89,14 @@
 
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
+  background-color: maroon;
   color: white;
 }
 
 /* Add a grey background to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: maroon;
+  color: white;
 }
 
 /* Show the dropdown menu when the user moves the mouse over the dropdown button */
@@ -135,32 +149,27 @@
   
 }
 
-.topnav .search-container {
-  float: right;
-}
 
-
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
 }
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-.topnav .search-container button:hover {
-  background: #ccc;
+* {
+  box-sizing: border-box;
+    margin: 0;
+  
 }
+.header {
 
+  height : auto;
+  width : 100%;
+  max-width: 100%;
+  display: block;
+  
+}
 
 </style>
 
@@ -168,19 +177,18 @@
 <body>
 
 
-		<div class = "blah">
-			<img src=".\images\red_header.png"  class="responsives">
+		<div class = "header">
+			<img src=".\images\red1.png"  class="header">
 		</div>
 
-	<hr>
 	<div class="topnav" id="myTopnav">
-	  <a href="#home" class="active">Home</a>
-	  <a href="#news">Subjects</a>
-	  <a href="#contact">Classes</a>
+	  <a href="Admin_home.jsp" class="active">Home</a>
+	  <a href="AdminSubject_home.jsp">Subjects</a>
+	  	  <a href="AdminMainInterface.jsp">Lessons</a>
 	  
-  <a href="#about">Tutorials</a>
-    <a href="#about">Notices</a>
-    <a href="#about">Payments</a>
+	      <a href="AdminScheduleVeiw.jsp">Schedules</a>
+    <a href="Appointments.jsp">Appointments</a>
+    <a href="adminDash.jsp">Payments</a>
         <a href="#about">Users</a>
     
   <div class="dropdown">
@@ -189,22 +197,17 @@
 	    </button>
 	    <div class="dropdown-content">
 	      <a href="#">Profile</a>
-	      <a href="#">Log Out</a>
+	      <a href="Unregistered_user_home.jsp">Log Out</a>
 	    </div>
   </div>
- <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </div>  
+
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   
-</div>
+</div><br>
 	  
 	  
 	 
-		<hr>
+		<hr class = "rounded">
 	
 <script>
 function myFunction() {

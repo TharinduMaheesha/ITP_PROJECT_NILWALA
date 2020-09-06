@@ -130,7 +130,7 @@ span.psw {
 			
 			<video controls controlsList="nodownload">
 			  <source src="<%=sub %>" >
-			</video>
+			</video></div>
 			
 			<div style = "margin-top: 25px">
 			
@@ -209,6 +209,7 @@ span.psw {
 		  	 	 <div class="tm_row"><br>
 		  	
   <form action="TeacherClassControllerServlet" method="post" >
+           <input type="hidden" name = "uid"  value = <%=(String)request.getAttribute("UserID") %>>
            <input type="hidden" name = "classID"  value = <%=s.getId() %>>
             <input type="submit" value="Edit" name = "saveClass"style = "font-size:20px; width : 300px ; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); padding: 20px 24px">
      
@@ -324,7 +325,8 @@ span.psw {
       <div class="tm_col-25">    
       </div>
       <div class="tm_col-75">      <br><br>
-      
+      	<input type="hidden" value =<%=(String)request.getAttribute("UserID")%> name = "UserID">	
+								<input type="hidden" value =<%=(String)request.getAttribute("UserID")%> name = "uid">	
             <input type="submit" value="Add" name = "saveClass" style = " font-size : 20px;width : 300px ; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); padding: 20px 24px">
       </div>
       </div>

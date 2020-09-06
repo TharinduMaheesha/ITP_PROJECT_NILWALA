@@ -48,6 +48,8 @@
 			<form method="post" action="TeacherClassControllerServlet" enctype='multipart/form-data'>
 			
 			<input type="hidden" value=<%=s.getId() %> name = "class_id">
+						<input type="hidden" value=<%=(String)request.getAttribute("UserID") %> name = "uid">
+			
 			
 			 <div class="tm_row">
 				      <div class="tm_col-25">

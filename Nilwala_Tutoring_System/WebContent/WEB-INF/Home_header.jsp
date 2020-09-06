@@ -78,7 +78,7 @@ body {
 body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text], input[type=password] , select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -353,8 +353,7 @@ span.psw {
   <a href="#" class="active">Home</a>
   <a href="#">Subjects</a>
   <a href="#">Contact Us</a>
-    <a href="#">Contact Us</a>
-    <a href="#">Contact Us</a>
+    
   
   <a href="#" class="right" onclick="document.getElementById('id02').style.display='block'" style="width:auto;" >Sign Up</a>
   <a href="#" class="right" onclick="document.getElementById('id01').style.display='block'" >Login</a>
@@ -372,12 +371,12 @@ span.psw {
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Enter Username" name="loginuname" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="loginpsw" required>
         
-      <button type="submit">Login</button>
+      <button type="submit" name = "headerButton" value = "login">Login</button>
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
@@ -424,6 +423,24 @@ window.onclick = function(event) {
       
        <label for="email"><b>Email</b></label>
       <input type="text" placeholder="Enter Email" name="email" required>
+      
+      <label for="email"><b>User Type</b></label>
+        <select name = "userType"  required >
+             <option value="student" id = "usertype" hidden selected>Choose user Type</option>
+             <option value="student" id = "usertype">Student</option>
+		     <option value="teacher" id = "usertype">Teacher</option>
+		</select>
+		
+		      <label for="email"><b>Grade</b></label>
+		
+		<select name = "grade" >
+									  <option  selected hidden>Select grade if you are a student</option>
+							          <option value="10">10</option>
+							          <option value="11">11</option>
+							          <option value="12">12</option>
+							          <option value="13">13</option>
+							</select>		
+      
       
        <label for="email"><b>Username</b></label>
       <input type="text" placeholder="Enter a username" name="uname" id = "uname" required onkeypress="validates()">
@@ -520,7 +537,7 @@ myInput.onkeyup = function() {
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn" onclick="return Validate()">Sign Up</button>
+        <button type="submit" class="signupbtn" onclick="return Validate()" name = "headerButton" value = "signup">Sign Up</button>
       </div>
     </div>
     

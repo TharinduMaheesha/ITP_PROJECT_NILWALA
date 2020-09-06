@@ -1,0 +1,44 @@
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: white;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 25px;
+}
+ul.breadcrumb li+li:before {
+  padding: 10px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: black;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+ul.breadcrumb li a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+button{
+  background-color: red; 
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-top:20px;
+  
+}
+
+div.butt{
+	
+	padding-left:900px;
+	padding-top:300px;
+	
+}

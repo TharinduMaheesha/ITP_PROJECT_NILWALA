@@ -3,6 +3,7 @@ package Servlet;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.security.auth.Subject;
 import javax.servlet.RequestDispatcher;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 import Model.SubjectClass;
+import Model.UserModel;
 import Util.ClassControllerUtil;
 
 /**
@@ -65,11 +67,112 @@ public class TeacherClassControllerServlet extends HttpServlet {
 			EditClass(request, response);
 		else if(saveValue.equalsIgnoreCase("Save Details"))
 			SaveEditClass(request, response);
+		else if(saveValue.equalsIgnoreCase("history"))
+			historyView(request, response);
+		else if(saveValue.equalsIgnoreCase("attendance"))
+			Attendance(request, response);
+		else if(saveValue.equalsIgnoreCase("blah"))
+			classHome(request, response);
+		else if(saveValue.equalsIgnoreCase("create")) {
+			request.setAttribute("id", request.getParameter("user"));
+			request.setAttribute("UserID", request.getParameter("user"));
+			String uid = request.getParameter("uid");
+			request.setAttribute("UserID", uid);
+
+			RequestDispatcher dis = request.getRequestDispatcher("Teacher_create_class.jsp");
+			dis.forward(request, response);
+			
+		}
+		else if(saveValue.equalsIgnoreCase("manage")) {
+			request.setAttribute("id", request.getParameter("UserID"));
+			request.setAttribute("UserID", request.getParameter("user"));
+
+			RequestDispatcher dis = request.getRequestDispatcher("Teacher_available_classes.jsp");
+			dis.forward(request, response);
+			
+		}
+		else if(saveValue.equalsIgnoreCase("historys")) {
+			request.setAttribute("id", request.getParameter("UserID"));
+			request.setAttribute("UserID", request.getParameter("user"));
+
+			RequestDispatcher dis = request.getRequestDispatcher("Teacher_class_history.jsp");
+			dis.forward(request, response);
+			
+		}
+		else if(saveValue.equalsIgnoreCase("notice")) {
+			String id = request.getParameter("uid");
+			request.setAttribute("UserID", id);
+			System.out.println("mamma mia2" + id);
+
+			
+			RequestDispatcher dis = request.getRequestDispatcher("Teacher_notice_home.jsp");
+			dis.forward(request, response);
+		}
+		else if(saveValue.equalsIgnoreCase("schedule")) {
+			String id = request.getParameter("uid");
+			request.setAttribute("UserID", id);
+			System.out.println("mamma mia2" + id);
+
+			
+			RequestDispatcher dis = request.getRequestDispatcher("ScheduleHome.jsp");
+			dis.forward(request, response);
+		}
+		else if(saveValue.equalsIgnoreCase("logout")) {
+			
+
+			
+			RequestDispatcher dis = request.getRequestDispatcher("Unregistered_user_home.jsp");
+			dis.forward(request, response);
+		}
+		else if(saveValue.equalsIgnoreCase("tute")) {
+			
+
+			
+			RequestDispatcher dis = request.getRequestDispatcher("Teacher_tutorial_home.jsp");
+			dis.forward(request, response);
+		}
+		else if(saveValue.equalsIgnoreCase("subject")) {
+			
+
+			
+			RequestDispatcher dis = request.getRequestDispatcher("TeacherSubject_home.jsp");
+			dis.forward(request, response);
+		}
+		else if(saveValue.equalsIgnoreCase("lesson")) {
+			
+
+			
+			RequestDispatcher dis = request.getRequestDispatcher("TM_Teacherlogin.jsp");
+			dis.forward(request, response);
+		}
+		else if(saveValue.equalsIgnoreCase("home")) {
+			
+
+			
+			RequestDispatcher dis = request.getRequestDispatcher("Teacher_home.jsp");
+			dis.forward(request, response);
+		}
+		
+		
+		
+		
+		
 		
 
 
 		
 	}
+	protected void classHome(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = request.getParameter("uid");
+		request.setAttribute("UserID", id);
+		System.out.println("mamma mia2" + id);
+
+		
+		RequestDispatcher dis = request.getRequestDispatcher("Teacher_class_home.jsp");
+		dis.forward(request, response);
+		
+	}
+
 	
 	protected void CreateClass(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -81,10 +184,14 @@ public class TeacherClassControllerServlet extends HttpServlet {
 		String start = request.getParameter("class_time_start");
 		String end = request.getParameter("class_time_end");
 		String subject = request.getParameter("subject");
+		String id = request.getParameter("createUID");
 
 		
 		sclass = new SubjectClass(level, grade, ekey, date, start, end , subject);
+		sclass.setId(id);
+		System.out.println("mamma mia1" + id);
 	
+		request.setAttribute("UserID", id);
 
 		
 		RequestDispatcher dis = request.getRequestDispatcher("Teacher_manage_class.jsp");
@@ -117,11 +224,16 @@ public class TeacherClassControllerServlet extends HttpServlet {
 	        
 		
 		try {
-			ClassControllerUtil.createClass(sclass , inputStream);
+			System.out.println("mamma mias"+sclass.getId());
+
+			ClassControllerUtil.createClass(sclass , inputStream , sclass.getId());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		request.setAttribute("id",sclass.getId());
+		request.setAttribute("UserID", sclass.getId());
+
 		
 		RequestDispatcher dis = request.getRequestDispatcher("Teacher_available_classes.jsp");
 		dis.forward(request, response);
@@ -147,6 +259,11 @@ public class TeacherClassControllerServlet extends HttpServlet {
 	protected void ViewClassDetails(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String id = request.getParameter("class_id");
+		String uid = request.getParameter("uid");
+		System.out.println("blah " + uid);			
+		request.setAttribute("UserID", uid);
+
+		
 		
 		try {
 			SubjectClass s = ClassControllerUtil.ViewClassDetails(id);
@@ -164,7 +281,9 @@ public class TeacherClassControllerServlet extends HttpServlet {
 
 
 	protected void AddVideo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		String uid = request.getParameter("uid");
+		System.out.println("blah " + uid);			
+		request.setAttribute("UserID", uid);
 		String id = request.getParameter("classID");
 		String link = request.getParameter("quiz_link");
 		String name = null;
@@ -200,6 +319,10 @@ public class TeacherClassControllerServlet extends HttpServlet {
 	
 	protected void EditClass(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("classID");
+		request.setAttribute("id", request.getParameter("user"));
+		request.setAttribute("UserID", request.getParameter("user"));
+		String uid = request.getParameter("uid");
+		request.setAttribute("UserID", uid);
 		try {
 			SubjectClass s = ClassControllerUtil.ViewClassDetails(id);
 			s.setId(id);
@@ -215,7 +338,10 @@ public class TeacherClassControllerServlet extends HttpServlet {
 	}
 	
 	protected void SaveEditClass(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		request.setAttribute("id", request.getParameter("user"));
+		request.setAttribute("UserID", request.getParameter("user"));
+		String uid = request.getParameter("uid");
+		request.setAttribute("UserID", uid);
 		String video = request.getParameter("video");
 		String level = request.getParameter("class_level");
 		String grade = request.getParameter("class_grade");
@@ -286,7 +412,49 @@ public class TeacherClassControllerServlet extends HttpServlet {
 			dis.forward(request, response);
 	}
 
+	protected void historyView(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String uid = request.getParameter("uid");
+		request.setAttribute("UserID", uid);
+		
+		String id = request.getParameter("cid");
+		System.out.println(id);
+		
+		try {
+			SubjectClass sub = ClassControllerUtil.ViewHistoryDetails(id);
+			request.setAttribute("historyDetails", sub);
+			 RequestDispatcher dis = request.getRequestDispatcher("Teacher_class_history_view.jsp");
+				dis.forward(request, response);
+		} catch (SQLException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	protected void Attendance(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String id = request.getParameter("id");
+		String uid = request.getParameter("uid");
+		System.out.println("blah " + uid);			
+		request.setAttribute("UserID", uid);
+		ArrayList<UserModel> user;
+		try {
+			user = ClassControllerUtil.AttendanceSheet(id);
+			request.setAttribute("id", user);
+			RequestDispatcher dis = request.getRequestDispatcher("Teacher_class_attendance.jsp");
+			dis.forward(request, response);
 
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+				
+		
+		
+	}
+
+		
+	
 }
 
 

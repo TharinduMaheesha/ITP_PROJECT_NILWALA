@@ -1,7 +1,8 @@
 ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
-  background-color: white;
+  background-color:  white;
+
 }
 ul.breadcrumb li {
   display: inline;
@@ -246,5 +247,31 @@ input[type=submit]:hover {
   max-width: 60%;
   margin:auto;
   display: block
+}
+.view_label{
+	background-color:red; 
+}
+
+#sm_tableArea
+{
+	width : 60%;
+	font-color : black;
+	font-weight: normal;
+	
+}
+
+#sm_tableArea td, #sm_tableArea th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+#sm_tableArea th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  font-weight: normal;
+  background-color: #3fbc48;
+  
 }
 

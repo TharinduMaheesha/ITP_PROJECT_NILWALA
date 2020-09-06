@@ -9,7 +9,7 @@
 
 <style>/* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: black;
   overflow: hidden;
 }
 
@@ -23,12 +23,25 @@
   text-decoration: none;
   font-size: 17px;
 }
-
-/* Add an active class to highlight the current page */
-.active {
-  background-color: blue;
+.btn{
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  background: none;
+  border: none;
+  outline: none;
+  
+}
+.btn:hover{
+background-color: blue;
   color: white;
 }
+.btn:focus{
+  outline: none;
+
+}
+/* Add an active class to highlight the current page */
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
@@ -57,7 +70,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: black;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -66,7 +79,7 @@
 /* Style the links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -75,7 +88,7 @@
 
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
+  background-color: blue;
   color: white;
 }
 
@@ -135,30 +148,31 @@
   
 }
 
-.topnav .search-container {
-  float: right;
+
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+  width: 99.9%;
 }
 
-
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  
 }
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
+* {
+  box-sizing: border-box;
 }
+.header {
 
-.topnav .search-container button:hover {
-  background: #ccc;
+  height : auto;
+  width : 100%;
+  max-width: 100%;
+  display: block;
+  
+}
+* {
+  box-sizing: border-box;
 }
 
 
@@ -168,41 +182,50 @@
 <body>
 
 
-		<div class = "blah">
-			<img src=".\images\blue_header.png"  class="responsives">
+		<div class = "header">
+			<img src=".\images\blue.png"  class="header">
 		</div>
 
-	<hr>
-	<div class="topnav" id="myTopnav">
-	  <a href="#home" class="active">Home</a>
-	  <a href="#news">Subjects</a>
-	  <a href="#contact">Classes</a>
+	
+<form action="StudentClassControllerServlet" method="post" id = "form">
+	  <%
 	  
-  <a href="#about">Tutorials</a>
-    <a href="#about">Notices & Appointments</a>
-    <a href="#about">Payments</a>
+	  String id = (String)request.getAttribute("UserID");
+	  
+	  %>
+	  <input type="hidden" value=<%=id %> name = "uid">
+	<div class="topnav" id="myTopnav">
+	  <a><button class="btn" type="submit" name = "StudentClass" value ="home">Home</button></a>
+	  <a><button class="btn" type="submit" name = "StudentClass" value ="subject">Subjects</button></a>
+	  	  <a><button class="btn" type="submit" name = "StudentClass" value ="lesson">Lessons</button></a>
+	  
+	  <a><button class="btn" type="submit" name = "StudentClass" value ="class">Classes</button></a>
+	  <a><button class="btn" type="submit" name = "StudentClass" value ="schedule">Schedule</button></a>
+	  <a><button class="btn" type="submit" name = "StudentClass" value ="tute">Tutorials</button></a>
+	  <a><button class="btn" type="submit" name = "StudentClass" value ="appointment">Notices & Appointments</button></a>
+	  <a><button class="btn" type="submit" name = "StudentClass" value ="cart">Payments</button></a>
   <div class="dropdown">
-	    <button class="dropbtn">Account
+	    <button class="dropbtn" disabled>Account
 	      <i class="fa fa-caret-down"></i>
-	    </button>
+	    </button >
 	    <div class="dropdown-content">
-	      <a href="#">Profile</a>
-	      <a href="#">Log Out</a>
+	  <a><button class="btn" type="submit" name = "saveClass" value ="blah">Profile</button></a>
+	  <a href='Unregistered_user_home.jsp'>Log Out</a>
 	    </div>
+	    
   </div>
- <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </div>  
+
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   
 </div>
+	    	  </form>
+ 
+  
 	  
 	  
 	 
-		<hr>
+			<hr class= "rounded">
+		
 	
 <script>
 function myFunction() {

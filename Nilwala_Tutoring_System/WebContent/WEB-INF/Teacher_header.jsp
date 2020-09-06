@@ -1,3 +1,4 @@
+<%@page import="Util.UserController"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -9,7 +10,7 @@
 
 <style>/* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: black;
   overflow: hidden;
 }
 
@@ -23,7 +24,26 @@
   text-decoration: none;
   font-size: 17px;
 }
+.btn{
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 5px 12px;
+  height: 100%;
+  width : 100%;
+}
+.btn:hover{
+background-color: green;
+  color: white;
+}
+.btn:focus{
+  outline: none;
 
+}
 /* Add an active class to highlight the current page */
 .active {
   background-color: #4CAF50;
@@ -47,7 +67,7 @@
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 18px 16px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -57,7 +77,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: black;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -66,8 +86,8 @@
 /* Style the links inside the dropdown */
 .dropdown-content a {
   float: none;
-  color: black;
-  padding: 12px 16px;
+  color: white;
+  padding: 20px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -75,13 +95,13 @@
 
 /* Add a dark background on topnav links and the dropdown button on hover */
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
+  background-color: green;
   color: white;
 }
 
 /* Add a grey background to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: green;
   color: black;
 }
 
@@ -135,76 +155,84 @@
   
 }
 
-.topnav .search-container {
-  float: right;
-}
 
-
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-  width : 80%;
-}
-
-.topnav .search-container button:hover {
-  background: #ccc;
-}
 hr.rounded {
   border-top: 8px solid #bbb;
   border-radius: 5px;
 }
+.header {
+
+  height : auto;
+  width : 100%;
+  max-width: 100%;
+  display: block;
+  
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
 
 
 </style>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
 
 
-		<div class = "blah">
-			<img src=".\images\green_header.png"  class="responsives">
+		<div class = "header">
+			<img src=".\images\g.png"  class="header">
 		</div>
-
-	<hr class = "rounded">
-	<div class="topnav" id="myTopnav">
-	  <a href="#home" class="active">Home</a>
-	  <a href="#news">Subjects</a>
-	  <a href="#contact">Classes</a>
+<form action="TeacherClassControllerServlet" method="post" id = "form">
+	  <%
 	  
-  <a href="#about">Tutorials</a>
-    <a href="#about">Notices</a>
-    <a href="#about">Payments</a>
+	  String id = (String)request.getAttribute("UserID");
+	  
+	  %>
+	  <input type="hidden" value=<%=id %> name = "uid">
+	<div class="topnav" id="myTopnav">
+	  <a><button class="btn" type="submit" name = "saveClass" value ="home">Home</button></a>
+	  <a><button class="btn" type="submit" name = "saveClass" value ="subject">Subjects</button></a>
+	  <a><button class="btn" type="submit" name = "saveClass" value ="lesson">Lessons</button></a>
+	  <a><button class="btn" type="submit" name = "saveClass" value ="blah">Classes</button></a>
+	  <a><button class="btn" type="submit" name = "saveClass" value ="tute">Tutorials</button></a>
+	  <a><button class="btn" type="submit" name = "saveClass" value ="notice">Notices</button></a>
+	  <a><button class="btn" type="submit" name = "saveClass" value ="schedule">Schedules</button></a>
+	  <a><button class="btn" type="submit" name = "saveClass" value ="blah">Payments</button></a>
   <div class="dropdown">
-	    <button class="dropbtn">Account
+	    <button class="dropbtn" disabled>Account
 	      <i class="fa fa-caret-down"></i>
 	    </button>
 	    <div class="dropdown-content">
-	      <a href="#">Profile</a>
-	      <a href="#">Log Out</a>
+	<a><button class="btn" type="submit" name = "saveClass" value ="blah">Profile</button></a>
+	 <a><button class="btn" type="submit" name = "saveClass" value ="logout" onclick="window.location.href='Unregistered_user_home.jsp'">Log Out</button></a>
 	    </div>
   </div>
- <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-  </div>  
+
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   
 </div>
-	  
+	    	  </form>
+
 	  
 	 
 	<hr class = "rounded">

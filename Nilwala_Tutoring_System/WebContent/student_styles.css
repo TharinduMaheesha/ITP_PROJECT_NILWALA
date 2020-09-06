@@ -18,6 +18,131 @@ ul.breadcrumb li a {
   font-family: sans-serif;
 }
 ul.breadcrumb li a:hover {
-  color: blue;
+  color: #3000b3;
   text-decoration: underline;
 }
+hr.solid {
+  border-top: 3px solid #3000b3;
+}
+
+.tm_class_home{
+	display : flex;
+	width : 99%;
+	margin : auto;
+	height : 500px;
+	background-color : #e3e3e3;
+}
+.tm_text_container{
+	flex : 1;
+	width : 100%;
+	margin: auto;
+	
+}
+.tm_button_container{
+	width : 50%;
+	flex : 1;
+	margin: auto;	
+}
+.tm_btn-group1 button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 20px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width:60%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  font-size: 20px;
+  
+}
+
+.tm_btn-group1 button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.tm_btn-group1 button:hover {
+  background-color: #3e8e41;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.tm_column {
+  float: left;
+  width: 90%;
+  height:auto;
+  padding: 0px 0px 0px 50px;
+}
+
+.tm_row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.tm_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .tm_column {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* Style the counter cards */
+.tm_card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 80px;
+  text-align: center;
+  background-color: #444;
+  color: white;
+}
+
+.tm_fa {font-size:50px;}
+
+
+
+.sm_addsubForm{
+	
+	border-style: groove;
+	width : 36%;
+}
+
+#sm_tableArea
+{
+	width : 60%;
+	font-color : black;
+	font-weight: normal;
+	
+}
+
+#sm_tableArea td, #sm_tableArea th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+
+#sm_tableArea th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0000ff;
+ 
+}
+
+
+
+
+
