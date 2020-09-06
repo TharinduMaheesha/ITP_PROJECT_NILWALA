@@ -1,3 +1,4 @@
+
 package com.servlet;
 
 import java.io.IOException;
@@ -10,24 +11,37 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.student.Student;
+import com.cart.cart;
+
 import com.util.StudentDButil;
+
 
 
 @WebServlet("/viewCartServlet")
 public class viewCartServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-      
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-	{
-		String stuID = request.getParameter("sid");			
-	
-			List<Student> cartDetails=StudentDButil.viewCart(stuID);
-			request.setAttribute("cartDetails",cartDetails);
-	
-			RequestDispatcher dis = request.getRequestDispatcher("cart.jsp");		 
-			dis.forward(request,response);
-	
-	}
+private static final long serialVersionUID = 1L;
+     
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+{
+String name = request.getParameter("namee");
+String student_id = request.getParameter("studentid");
+String subject_code = request.getParameter("subjectcode");
+try {
+List<cart> Details=StudentDButil.validate(subject_code);
+request.setAttribute("Details",Details);
+}
+catch(Exception e)
+{
+e.printStackTrace();
+}
+RequestDispatcher dis = request.getRequestDispatcher("cart.jsp");
+dis.forward(request,response);
 
 }
+
+
+}
+
+	
+	
+	
