@@ -34,7 +34,7 @@ public class TM_AdminFetchData extends HttpServlet {
 			out.println("<html><body><center><table class=table border=150px;><tr><td>Teacher ID</td><td>Subject Code</td><td>Lesson Number</td><td>Lesson Name</td></tr>");
 			while(rs.next())
 			{
-				out.println("<tr><td>"+rs.getString(1)+"</td> <td>"+rs.getString(2)+"</td> <td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td></tr>");
+				out.println("<tr><td>"+rs.getInt(1)+"</td> <td>"+rs.getString(2)+"</td> <td>"+rs.getInt(3)+"</td><td>"+rs.getString(4)+"</td></tr>");
 					
 			}			
 			

@@ -16,23 +16,19 @@
 
 	<div>
 		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Home</b></a></li>		  
+		  <li><a href="#"><b></b></a></li>		  
 		</ul>
 	</div>
 	<div style = " max-width: 700px;  margin: auto;" class = "background"  class = "transbox" >
 	<table style = " align : center;">
 	<div class="table-responsive">
 	
-				<c:forEach var="tea" items="${teaDetails}">
-				<c:set var="teacherid" value="${tea.teacher_id}"/>
-				<c:set var="subjectcode" value="${tea.subject_code}"/>
-				<c:set var="lessonno" value="${tea.lesson_no}"/>
-				<c:set var="lessonname" value="${tea.lesson_name}"/>
+			 	 <form method = "POST" action = "TM_ViewLessonServlet">
+				
 				
 			<table class="table">
-			  <thead class="thead-dark">
-			    <tr>
-			      
+			  <thead class="tt">
+			    <tr>  
 			      <th scope="col">Lesson Number</th>
 			      <th scope="col">Lesson Name</th>
 			      <th scope="col">View Lesson</th>
@@ -40,21 +36,29 @@
 			    </tr>
 			  </thead>
 			  <tbody>
+			  <c:forEach var="tea" items="${teaDetails}">
+				<c:set var="teacherid" value="${tea.teacher_id}"/>
+				<c:set var="subjectcode" value="${tea.subject_code}"/>
+				<c:set var="lessonno" value="${tea.lesson_no}"/>
+				<c:set var="lessonname" value="${tea.lesson_name}"/>
 			    <tr>
 			      
 			      <td>${tea.lesson_no}</td>
 			      <td>${tea.lesson_name}</td>
 			      
-			 	 <form method = "POST" action = "TM_AddLesson.jsp">
-			      <td><button type="button" class="btn btn-outline-success" ><b>View</b></button></td>
+			      <td><button type="submit" class="btn btn-outline-success" name = "ViewClass" value="view"><b>View</b></button></td>
 			     </form> 
-			      <td><button type="button" class="btn btn btn-outline-danger" ><b>Delete The Lesson</b></button></td>
-			      
+			      <td><button type="submit" class="btn btn btn-outline-danger" name = "ViewClass"  value="delete"><b>Delete</b></button></td>
+			      <input type="hidden" name = "tid"  value="${tea.teacher_id}"> 		
+			      	      <input type="hidden" name = "scode"  value="${tea.subject_code}"> 
+			      	    <input type="hidden" name = "lessonNo" value="${tea.lesson_no}"> 
+			      	      
+			      	      
 			    </tr>
+			 </c:forEach>
 		
 			  </tbody>
 			</table>
-			</c:forEach>
 			</div>
 		
 			 <form method = "POST" action = "TM_AddLesson.jsp">

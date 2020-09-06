@@ -242,7 +242,7 @@ input[type=submit]:hover {
 }
 
 .btn1 {
-  background-color: #28B463;
+  background-color: #196F3D ;
   border: none;
   color: white;
   padding: 15px 16px;
@@ -252,7 +252,7 @@ input[type=submit]:hover {
 
 /* Darker background on mouse-over */
 .btn1:hover {
-  background-color: #82E0AA;
+  background-color: #2ECC71 ;
 .col-25 {
   float: left;
   width: 25%;

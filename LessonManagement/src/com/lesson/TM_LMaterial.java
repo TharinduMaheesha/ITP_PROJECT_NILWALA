@@ -6,6 +6,9 @@ public class TM_LMaterial {
 	private String subject_code;
 	private int lesson_no;
 	private String material;
+	private String slesson;
+	private String steacher_id;
+
 	
 	public TM_LMaterial(int teacher_id, String subject_code, int lesson_no, String material) {
 		super();
@@ -33,6 +36,24 @@ public class TM_LMaterial {
 	public String getMaterial() {
 		return material;
 	}
+
+	public String getSlesson() {
+		return slesson;
+	}
+
+	public void setSlesson(String slesson) {
+		this.slesson = slesson;
+	}
+
+	public String getSteacher_id() {
+		return steacher_id;
+	}
+
+	public void setSteacher_id(String steacher_id) {
+		this.steacher_id = steacher_id;
+	}
+	
+	
 
 	
 	

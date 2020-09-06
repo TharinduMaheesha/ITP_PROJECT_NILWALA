@@ -25,14 +25,10 @@
 	<table style = " align : center;">
 	<div class="table-responsive">
 	
-				<c:forEach var="tea" items="${teaDetails}">
-				<c:set var="teacherid" value="${tea.teacher_id}"/>
-				<c:set var="subjectcode" value="${tea.subject_code}"/>
-				<c:set var="lessonno" value="${tea.lesson_no}"/>
-				<c:set var="lessonname" value="${tea.lesson_name}"/>
+				
 				
 			<table class="table">
-			  <thead class="thead-dark">
+			  <thead class="ttt">
 			    <tr>
 			      
 			      <th scope="col">Lesson Number</th>
@@ -42,17 +38,22 @@
 			    </tr>
 			  </thead>
 			  <tbody>
+			  <c:forEach var="tea" items="${teaDetails}">
+				<c:set var="teacherid" value="${tea.teacher_id}"/>
+				<c:set var="subjectcode" value="${tea.subject_code}"/>
+				<c:set var="lessonno" value="${tea.lesson_no}"/>
+				<c:set var="lessonname" value="${tea.lesson_name}"/>
 			    <tr>
 			      
 			      <td>${tea.lesson_no}</td>
 			      <td>${tea.lesson_name}</td>
-			      <td><button type="button" class="btn btn-outline-primary" ><b>View</b></button></td>
+			      <td><button type="button" class="btn btn-outline-primary" ><b>View The Lesson</b></button></td>
 			     
 			    </tr>
+					</c:forEach>
 		
 			  </tbody>
 			</table>
-			</c:forEach>
 			</div>
 		
 	<hr>

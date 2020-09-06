@@ -29,13 +29,13 @@
 			<input type = "text" id = "scode" name = "subjectcode"></center>
 		
 			<center><label for="Last name" >Lesson Number :</label>
-			<input type = "text" id = "lno" name = "lessonno" placeholder="ex : 01"required></center>
+			<input type = "text" id = "lno" name = "lessonno" placeholder="ex : 01........"required></center>
 			
 			<center><label for="Last name" >Lesson Name :</label>
-			<input type = "text" id = "lno" name = "lessonname" placeholder="Enter the name of the lesson"required></center>
+			<input type = "text" id = "lno" name = "lessonname" placeholder="Enter the name of the lesson......."required></center>
 			
 			<center><label for="Last name" >Materials :</label>
-			<textarea type = "text" id = "mat"  name = "material" placeholder="Enter the materials"required></textarea></center><br>
+			<textarea type = "text" id = "mat"  name = "material" placeholder="Enter the materials......"required></textarea></center><br>
 			
 			<center><button class ="btn btn-success"><b>Add The Lesson</button>
 			<button class ="btn btn-outline-danger" class="reset-button">Reset The Details</b></button></center><br>

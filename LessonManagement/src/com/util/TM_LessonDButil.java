@@ -2,10 +2,12 @@ package com.util;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 
 import com.lesson.TM_LMaterial;
 import com.lesson.TM_Lesson;
@@ -228,5 +230,40 @@ public class TM_LessonDButil {
 		    	return ps;
 	    }
 
+			public static TM_LMaterial ViewLessonMaterials(String tid , String subCode , String lessonNo) throws SQLException {
+				
+				TM_LMaterial lesson = null; 
+	    		con = TM_DBconnect.getConnection();
+	    		PreparedStatement stat = null;
+	    		
+	    		String sql = "select * from lesson_material where teacher_id = ? and subject_code = ? and lesson_no = ?";
+	    		stat = con.prepareStatement(sql);
+	    		stat.setString(1, tid);
+	    		stat.setString(2, subCode);
+	    		stat.setString(1, lessonNo);
+	    		
+	    		stat.execute();
+	    		
+	    		while(rs.next()) {
+	    			
+	    			String teacher_id = rs.getString("teacher_id");
+	    			String subcode = rs.getString("subject_code");
+	    			String lessonno1 = rs.getString("lesson_no");
+	    			String mat = rs.getString("material");
+	    				    			
+	    			lesson = new TM_LMaterial(1, subcode, 1, mat);
+	    			lesson.setSteacher_id(teacher_id);
+	    			lesson.setSlesson(lessonno1);
+	    			
+	    			
+	    		}
+
+	    		return lesson;
+	    		
+	    		
+
+				
+				
+			}
 		
 }

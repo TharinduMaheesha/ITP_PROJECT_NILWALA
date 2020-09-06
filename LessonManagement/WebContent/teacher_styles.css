@@ -144,7 +144,7 @@ ul.breadcrumb li a:hover {
 	}
 	
 	.tablinks button:after {
-		background-color: ;
+		background-color: #2ECC71 ;
 		
 		
 	}
@@ -154,6 +154,21 @@ ul.breadcrumb li a:hover {
 		
 	}
 
+.tt{
+	background-color:#1E8449 ;
+	color:white;
+}
+textarea:focus, input:focus {
+    color: #F08080;
+}
+
+input, select, textarea{
+    color: midnightblue;
+}
+input, select, textarea {
+font-size: 90%;
+font-weight: bold;
+}
 	.head{
 	font-color: midnightblue;
 	

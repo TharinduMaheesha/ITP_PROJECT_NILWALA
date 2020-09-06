@@ -18,6 +18,16 @@
   </welcome-file-list>
   
   <servlet>
+  	<servlet-name>TM_AdminFetchData</servlet-name>
+  	<servlet-class>com.servlet.TM_AdminFetchData</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>TM_AdminFetchData</servlet-name>
+  	<url-pattern>/TM_AdminFetchData</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
   	<servlet-name>TM_TeacherLoginSer</servlet-name>
   	<servlet-class>com.servlet.TM_TeacherLoginSer</servlet-class>
   </servlet>
