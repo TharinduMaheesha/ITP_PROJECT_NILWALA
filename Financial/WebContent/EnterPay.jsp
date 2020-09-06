@@ -19,27 +19,31 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 
 <div class="shadow-lg p-3 mb-5 bg-white rounded"><br>
 
-	<form class="needs-validation" novalidate>
+		<center><br><br><h4>Enter Payment details </h4>
+<P>Enter here your payment details</P></center> 
+
+	<form acion="EnterPayDeSev" method="post">
 	
   <div class="form-row">
     <div class="col-md-6 mb-3">
-      <label for="validationCustom01">Card Number</label>
-      <input type="text" class="form-control" id="validationCustom01" name=""  required>
-     
+      <label>Student No</label>
+      <input type="text" class="form-control" name="uid" required>
+   </div>
+    <div>
+      <label for="validationCustom02">Card No</label>
+      <input type="text" class="form-control" name="cardno" required>
     </div>
+  </div>
+  <div>
     <div class="col-md-6 mb-3">
+      <label for="validationCustom03">Expiery Date </label>
+      <input type="text" class="form-control" name="exp"  required>
+    </div>
+    <div>
       <label for="validationCustom02">Security Code</label>
-      <input type="text" class="form-control" id="validationCustom02" name="" required>
-     
+      <input type="text" class="form-control" name="scode" required>
     </div>
   </div>
-  <div class="form-row">
-    <div class="col-md-6 mb-3">
-      <label for="validationCustom03">Expiry Date </label>
-      <input type="text" class="form-control" id="validationCustom03" name=""  required>
-    </div>
-  </div>
-  
 </div>
 
   <center><input type="submit" class="btn btn-danger" type="submit" value="Pay Now"></center>

@@ -17,26 +17,26 @@ public class StudentDButil {
 		private static Statement stmt = null;
 		private static ResultSet rs = null;
 
-		public static List<cart> validate(String subject_code){
+		public static List<cart> validate(String student_id){
 				ArrayList<cart> ma = new ArrayList<>();
 				
 				try {
 				con = DBconnect.getConnection();
 				stmt = con.createStatement();
 				
-				String sql = "select* from cart where subject_code = '"+subject_code+"'";
+				String sql = "select* from cart where student_id = '"+student_id+"'";
 				
 				rs = stmt.executeQuery(sql);
 				
 				while(rs.next())
 				{
-				int student_id = rs.getInt(1);
+				int studentid = rs.getInt(1);
 				String subjectcode = rs.getString(2);
 				String name = rs.getString(3);
 				String level = rs.getString(4);
 				System.out.println("test : " + name);
 				
-				cart m = new cart(student_id , subjectcode , name ,level);
+				cart m = new cart(studentid , subjectcode , name ,level);
 				ma.add(m);
 				}
 				}catch(Exception e){
@@ -98,4 +98,33 @@ public class StudentDButil {
 			return isSuccess;
 		}
 		
+	
+	
+	//================================================================
+	public static boolean insertCard(String userID ,String cardNO,String cw,String expDate){
+		
+		
+		boolean isSuccess = false;
+	
+		try {
+			con = DBconnect.getConnection();
+			stmt = con.createStatement();
+		
+		    String sql = "insert into userpayment values('"+userID+"', '"+cardNO+"','"+cw+"','"+expDate+"')";
+			int rs = stmt.executeUpdate(sql);
+			
+			if(rs > 0) {
+				isSuccess = true;
+			} else {
+				isSuccess = false;
+			}
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return isSuccess;
+	}
+	
 }

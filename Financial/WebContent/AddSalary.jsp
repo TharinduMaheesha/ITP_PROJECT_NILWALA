@@ -20,6 +20,7 @@ Financial Admin's Worksite   |    Financial Admin's Worksite     |Financial Admi
 			<center><h4>Financial Admin's Worksite</h4></center><br>
 			<center><div class="spinner-grow text-danger" role="status"><span class="sr-only">Loading...</span></div></center><br>
 		<center><h5>Add Monthly Salary </h5></center>
+		<center><p>Enter teacher details and salary amount LKR.</p></center>
 
 <div class="shadow-lg p-3 mb-5 bg-white rounded">
 	<div>

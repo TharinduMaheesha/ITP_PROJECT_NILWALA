@@ -27,7 +27,7 @@ String name = request.getParameter("namee");
 String student_id = request.getParameter("studentid");
 String subject_code = request.getParameter("subjectcode");
 try {
-List<cart> Details=StudentDButil.validate(subject_code);
+List<cart> Details=StudentDButil.validate(student_id);
 request.setAttribute("Details",Details);
 }
 catch(Exception e)

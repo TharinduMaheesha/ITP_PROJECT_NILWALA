@@ -19,7 +19,7 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 
 
 <center><lable>Enter your ID number to continue :</lable></center>
-<center><input type ="text" name="subjectcode" ></center><br><br>
+<center><input type ="text" name="studentid" ></center><br><br>
 
 <center><input type ="submit" name="submit" value="view cart" class="btn btn-primary"></center>
 </form>
