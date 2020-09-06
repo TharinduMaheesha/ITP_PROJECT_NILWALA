@@ -12,37 +12,90 @@ import com.cart.cart;
 
 public class StudentDButil {
 
-private static boolean isSuccess;
-private static Connection con = null;
-private static Statement stmt = null;
-private static ResultSet rs = null;
+		private static boolean isSuccess;
+		private static Connection con = null;
+		private static Statement stmt = null;
+		private static ResultSet rs = null;
 
-public static List<cart> validate(String subject_code){
-ArrayList<cart> ma = new ArrayList<>();
-
-try {
-con = DBconnect.getConnection();
-stmt = con.createStatement();
-
-String sql = "select* from cart where subject_code = '"+subject_code+"'";
-
-rs = stmt.executeQuery(sql);
-
-while(rs.next())
-{
-int student_id = rs.getInt(1);
-String subjectcode = rs.getString(2);
-String name = rs.getString(3);
-String level = rs.getString(4);
-System.out.println("test : " + name);
-
-cart m = new cart(student_id , subjectcode , name ,level);
-ma.add(m);
-}
-}catch(Exception e){
-
-e.printStackTrace();
-}
-return ma;
-}
+		public static List<cart> validate(String subject_code){
+				ArrayList<cart> ma = new ArrayList<>();
+				
+				try {
+				con = DBconnect.getConnection();
+				stmt = con.createStatement();
+				
+				String sql = "select* from cart where subject_code = '"+subject_code+"'";
+				
+				rs = stmt.executeQuery(sql);
+				
+				while(rs.next())
+				{
+				int student_id = rs.getInt(1);
+				String subjectcode = rs.getString(2);
+				String name = rs.getString(3);
+				String level = rs.getString(4);
+				System.out.println("test : " + name);
+				
+				cart m = new cart(student_id , subjectcode , name ,level);
+				ma.add(m);
+				}
+				}catch(Exception e){
+				
+				e.printStackTrace();
+				}
+		return ma;
+		}
+		//===============================================================================================================
+		public static boolean insertsalary(String teacher_id,String transaction_id) {
+			
+			boolean isSuccess = false;
+		
+			try {
+				con = DBconnect.getConnection();
+				stmt = con.createStatement();
+			
+			    String sql = "insert into salary values('"+teacher_id+"','"+transaction_id+"')";
+				int rs = stmt.executeUpdate(sql);
+				
+				if(rs > 0) {
+					isSuccess = true;
+				} else {
+					isSuccess = false;
+				}
+				
+			}
+			catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			return isSuccess;
+			}
+		//===============================================================================================================
+	public static boolean insert(String transaction_id,String description, String type, String amount) {
+		
+		double amount1 =Double.parseDouble(amount);
+			
+			boolean isSuccess = false;
+		
+			try {
+				con = DBconnect.getConnection();
+				stmt = con.createStatement();
+			
+			    String sql = "insert into transaction values ('"+transaction_id+"','"+description+"','"+type+"','"+amount1+"')";
+				int rs = stmt.executeUpdate(sql);
+				
+				if(rs > 0) {
+					isSuccess = true;
+				} else {
+					isSuccess = false;
+				}
+				
+			}
+			catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			return isSuccess;
+		}
+		
 }
