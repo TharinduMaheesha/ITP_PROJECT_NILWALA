@@ -1,23 +1,25 @@
 package com.cart;
 
+
 public class cart {
-private int student_id;
-private String subject_code;
-private String name;
-private String level;
-private String studentid;
+	private int student_id;
+	private String subject_code;
+	private String name;
+	private String level;
+	private String studentid;
+
+	int totfee=0;
 
 
 public cart(int student_id, String subject_code, String name, String level) {
-
-this.student_id = student_id;
-this.subject_code = subject_code;
-this.name = name;
-this.level = level;
+	this.student_id = student_id;
+	this.subject_code = subject_code;
+	this.name = name;
+	this.level = level;
 }
 
 public int getStudentID() {
-return student_id;
+	return student_id;
 }
 
 public String getSubjectCode() {
@@ -40,7 +42,16 @@ public void setStudentid(String studentid) {
 this.studentid = studentid;
 }
 
-
+public int calFee() {
+	
+	if(level=="OL") {
+		totfee = totfee+ 1000;
+	}
+	if(level=="AL"){
+		totfee = totfee + 1500;
+	}
+	return totfee;
+}
 
 
 }

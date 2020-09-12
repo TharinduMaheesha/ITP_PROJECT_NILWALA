@@ -37,5 +37,10 @@
 <url-pattern>/EnterPayDeSev</url-pattern>
 </servlet-mapping>
 
+ <error-page>   
+  <exception-type>java.lang.NullPointerException</exception-type>   
+  <location>/cart.jsp</location>   
+  </error-page> 
+
 </web-app>
 </element>	
