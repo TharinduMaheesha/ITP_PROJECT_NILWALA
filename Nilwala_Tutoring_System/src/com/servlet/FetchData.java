@@ -21,7 +21,7 @@ public class FetchData extends HttpServlet {
 		{
 			response.setContentType("text/html");
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/nilwala_online_system"); 
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/nilwala_online_system","root","hashini"); 
 			PreparedStatement ps=con.prepareStatement("select * from schedule");
 			ResultSet rs=ps.executeQuery();
 			PrintWriter out=response.getWriter();
