@@ -39,7 +39,7 @@
   
  <center><form action="update" method="post">
    <div class="Schedule-container2">
-	 <h3>Create a Schedule..</h3>
+	 <h3>Update my Schedule..</h3>
 	   <p>Enter the details that you want to update...</p>
 	     <hr>
    

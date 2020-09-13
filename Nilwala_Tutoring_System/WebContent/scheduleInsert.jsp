@@ -64,7 +64,7 @@ border-radius:10px;
  
  
 .rq {
-color: #FF0000;
+color: black;
 font-size: 10pt;
 }
  
@@ -121,7 +121,7 @@ font-size: 10pt;
 	  
 	
 	
-	 <b><button type="submit" name="submit" value="Schedule a new session" class="addbtn" onclick="validatedate(document.form1.ceatedDate)" onclick="allnumeric(document.form1.grade)" onclick="CheckDecimal(document.form1.grade)">Schedule a new session</button><br>
+	 <b><button type="submit" name="submit" value="Schedule a new schedule" class="addbtn" onclick="validatedate(document.form1.ceatedDate)" onclick="allnumeric(document.form1.grade)" onclick="CheckDecimal(document.form1.grade)">Schedule a new session</button><br>
 	 <br>
 	 <br>
 	 

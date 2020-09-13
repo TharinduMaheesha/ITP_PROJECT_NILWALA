@@ -75,8 +75,8 @@
 
    <center><div class = "but3">
      
-        <a href="ScheduleHome.jsp">
-        <button class="success"><span> <- Back </span></button>
+        <a href="login.jsp">
+        <button class="success"><span> Delete Previous week's shedule</span></button>
          </a><br>
     </div></center>
 

@@ -74,7 +74,7 @@ text-decoration: underline;
 
 	<div>
 		<ul class="breadcrumb"> <!--   add your path example : Subject / Add Subject 1st li subject 2nd li Add Subject . change accordingly-->
-		  <li><a href="#"><b>Shedule</b></a></li>		  
+		  <li><a href="ScheduleHome.jsp"><b>Shedule</b></a></li>		  
 		</ul>
 	</div>
 	<hr>

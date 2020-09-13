@@ -147,6 +147,12 @@ background-color:#C0C0C0;
 <center><a href="ScheduleHome.jsp">
              <button class="backBtn"><span>Back</span></button>
          </a></center><br>
+         
+         
+          <center><form action="FetchData" method="post">
+   <input type="submit" value="Get All Records">
+   </form><br></center>
+   
      
 
 <div class="successpageHr">
