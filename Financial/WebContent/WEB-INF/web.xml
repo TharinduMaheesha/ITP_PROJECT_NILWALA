@@ -27,20 +27,17 @@
 <url-pattern>/AddSalarySev</url-pattern>
 </servlet-mapping>
 
+
 <servlet>
-<servlet-name>EnterPayDeSev</servlet-name>
-<servlet-class>com.servlet.EnterPayDeSev</servlet-class>
+<servlet-name>payFeeServlet</servlet-name>
+<servlet-class>com.servlet.payFeeServlet</servlet-class>
 </servlet>
 
 <servlet-mapping>
-<servlet-name>EnterPayDeSev</servlet-name>
-<url-pattern>/EnterPayDeSev</url-pattern>
+<servlet-name>payFeeServlet</servlet-name>
+<url-pattern>/payFeeServlet</url-pattern>
 </servlet-mapping>
 
- <error-page>   
-  <exception-type>java.lang.NullPointerException</exception-type>   
-  <location>/cart.jsp</location>   
-  </error-page> 
 
 </web-app>
 </element>	

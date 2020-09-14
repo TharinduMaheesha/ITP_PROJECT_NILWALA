@@ -7,6 +7,8 @@ public class cart {
 	private String name;
 	private String level;
 	private String studentid;
+	
+	private int levelCount;
 
 	int totfee=0;
 
@@ -42,16 +44,8 @@ public void setStudentid(String studentid) {
 this.studentid = studentid;
 }
 
-public int calFee() {
-	
-	if(level=="OL") {
-		totfee = totfee+ 1000;
-	}
-	if(level=="AL"){
-		totfee = totfee + 1500;
-	}
-	return totfee;
+public int getLevelCount() {
+	return levelCount;
 }
-
 
 }

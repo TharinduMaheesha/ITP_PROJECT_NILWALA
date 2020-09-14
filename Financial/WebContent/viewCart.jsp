@@ -17,21 +17,32 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 <%@ include file="WEB-INF/Student_header.jsp" %>
 <div class="shadow-lg p-3 mb-5 bg-white rounded">
 
+<center><h4>Your Subjects</h4></center>
+<div class="card">
+  <div class="card-header">
+    You can view your selected subject
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Start learning now after the payment</h5>
 <form action="viewCartServlet" method="post">
-
-
 <center><lable>Enter your ID number to continue :</lable></center>
-<center><input type ="text" name="studentid" min="-1"></center><br><br>
+<center><input type ="text" class="form-control"  name="studentid" min="-1"></center><br><br>
 
 <center><input type ="submit" name="submit" value="view cart" onclick="myFunction()" class="btn btn-primary"></center>
 </form>
 
 
+  </div>
+</div>
+
+
 
 <script>
 function myFunction() {
-  alert("You you can check the cart and then click PAY NOW >> ");
+  confirm("Are you sure ?");
 }
+</script>
+
 </script>
 </div>
 <hr>

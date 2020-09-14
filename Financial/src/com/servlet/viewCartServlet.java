@@ -23,14 +23,12 @@ public class viewCartServlet extends HttpServlet {
 	     
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-				String name = request.getParameter("namee");
 				String student_id = request.getParameter("studentid");
-				String subject_code = request.getParameter("subjectcode");
-
+	
 		List<cart> Details=StudentDButil.validate(student_id);
 		request.setAttribute("Details",Details);
 	
-
+		
 		RequestDispatcher dis = request.getRequestDispatcher("cart.jsp");
 		dis.forward(request,response);
 	

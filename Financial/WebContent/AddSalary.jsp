@@ -34,9 +34,8 @@ Financial Admin's Worksite   |    Financial Admin's Worksite     |Financial Admi
 			 <center><label >Teacher ID </label>
 			<input type = "text" size="10" name = "teacherid" required ></center>
 			
-			<center><label >Transaction ID</label>
-			<input type = "text" name = "transactionid"></center>
-
+				 <center><label >Tran ID </label>
+			<input type = "text" size="10" name = "transactionid" required ></center>
 			
 			<center><label >Type </label>
 			<input type = "text" name="typee" required></input></center><br>

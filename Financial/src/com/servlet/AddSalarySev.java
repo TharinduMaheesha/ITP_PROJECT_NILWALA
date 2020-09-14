@@ -34,17 +34,10 @@ public class AddSalarySev extends HttpServlet {
 		isTrue = StudentDButil.insert(transaction_id,description,type,amount);
 		
 		if(isTrue == true) {
-	
-			
-			
 			RequestDispatcher dis = request.getRequestDispatcher("adminDash.jsp");
 			dis.forward(request, response);
-			
 		}
 		else {
-			
-			
-			
 			RequestDispatcher dis = request.getRequestDispatcher("totalFee.jsp");
 			dis.forward(request, response);
 		}

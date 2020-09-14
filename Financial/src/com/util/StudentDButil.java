@@ -25,16 +25,15 @@ public class StudentDButil {
 					stmt = con.createStatement();
 					
 					String sql = "select* from cart where student_id = '"+student_id+"'";
-					
+			
 					rs = stmt.executeQuery(sql);
-				
 				while(rs.next())
 				{
 					int studentid = rs.getInt(1);
 					String subjectcode = rs.getString(2);
 					String name = rs.getString(3);
 					String level = rs.getString(4);
-					System.out.println("test : " + name);
+					System.out.println("test : "+name);
 					
 					cart m = new cart(studentid , subjectcode , name ,level);
 					ma.add(m);
@@ -46,6 +45,7 @@ public class StudentDButil {
 		return ma;
 		}
 		//===============================================================================================================
+	
 		public static boolean insertsalary(String teacher_id,String transaction_id) {
 			
 			boolean isSuccess = false;
@@ -124,36 +124,33 @@ public class StudentDButil {
 	}
 	
 	//=========================================================================
-	public static boolean deleteSubject(String subject_code) {
+	public static boolean insertPayment(String student_id,String fee,String exp_date,String card_no,String sec_code) {
+		
+		int studentid =Integer.parseInt(student_id);
+		double fee1=Double.parseDouble(fee);
+		int sec_code1 = Integer.parseInt(sec_code);
 		
 		boolean isSuccess = false;
 		
-		try
-		{
+		try {
 			con = DBconnect.getConnection();
-    		stmt = con.createStatement();
-    		String sql = "delete * from cart where subject_code= '"+subject_code+"' ";
-    		
-    		int result = stmt.executeUpdate(sql);
-    		
-    		if(result > 0) 
-    		{
-    			isSuccess = true;
-    		}
-    		else 
-    		{
-    			isSuccess = false;
-    		}
-			
-		}
+			stmt = con.createStatement();
 		
-		catch(Exception e)
-		{
+		    String sql = "insert into payment values (null,'"+studentid+"','"+fee1+"','"+exp_date+"','"+card_no+"','"+sec_code1+"')";
+			int rs = stmt.executeUpdate(sql);
+			
+			if(rs > 0) {
+				isSuccess = true;
+			} else {
+				isSuccess = false;
+			}
+		}
+		catch(Exception e) {
 			e.printStackTrace();
 		}
-		
-		return isSuccess;
+	return isSuccess;
 	}
+	
 }
 
 
