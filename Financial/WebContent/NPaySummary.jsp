@@ -1,3 +1,4 @@
+<%@page import="com.cart.cart"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -20,6 +21,7 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
   <fieldset disabled>
     <div class="form-group">
       <label for="disabledTextInput">Student's Name</label>
+      <%= %>
       <input type="text" id="disabledTextInput" class="form-control" >
     </div>
     

@@ -14,43 +14,41 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 <div class="shadow-lg p-3 mb-5 bg-white rounded"></div><br>
 
 
-<h3 class="text-center">Salary History</h3>
-<p class="text-center">Here is your salary history</p><br><br>
-	<hr>
+<center><h3>Salary Payment History to Teachers</h3></center>
+<br><br>
+<table class="table">
+ <thead>
+   <tr>  
+      <th>Date & Time</th>
+     <th>Refund ID</th>
+     <th >Reason</th>
+     <th >Status</th>
+     <th >Student ID</th>
+      <th>Decline</th>
+       <th >Approve</th>
+   </tr>
+ </thead>
+		 <tbody>
+		<% ArrayList<Refunds> array = (ArrayList)request.getAttribute("Details6");
+		for(Refunds ref:array){	
+		%>
+		   <tr>  
+		     <td><%=ref.getDate()%></td>
+		     <td><%=ref.getRefID()%></td>
+		     <td><%=ref.getReason()%></td>
+		     <td><%=ref.getStatus()%></td>
+		     <td><%=ref.getStudentID()%></td>
+		     <td><a href="#">Decline</a></td>
+		     <td><a href="#">Approve</a></td>
+		     <%}%>
 		
-		
-<div class="shadow-lg p-3 mb-5 bg-white rounded">
-	<form>
-		<table class="table table-hover table-dark" class="kl" >
-		  <thead>
-		    <tr>
-		      <th scope="col" class="text-center">Month</th>
-		      <th scope="col" class="text-center">Amount</th>
-		      <th scope="col" class="text-center">Transfered Date</th>
-		    </tr>
-		  </thead>
-		  
-		  <tbody>
-		    <tr>
-		      <td></td>
-		      <td></td>
-		    </tr>
-		  </tbody>
-		
-		</table>
-	
-		
-</form>
-	</div>
-		
-		
-		
-		
-		
-		
-	<br><br>
-		 <center><a href="#"  class="btn btn-danger" class="btn btn-primary btn-lg">Continue to lessons</a></center>
-	<hr>
+		   </tr>
+		 </tbody>
+</table>
+
+
+<br><br><br>
+
 </body>
 <footer></footer>
 </html>

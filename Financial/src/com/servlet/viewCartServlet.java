@@ -28,6 +28,8 @@ public class viewCartServlet extends HttpServlet {
 		List<cart> Details=StudentDButil.validate(student_id);
 		request.setAttribute("Details",Details);
 	
+		List<cart> Details2=StudentDButil.takeid(student_id);
+		request.setAttribute("Details2",Details2);
 		
 		RequestDispatcher dis = request.getRequestDispatcher("cart.jsp");
 		dis.forward(request,response);

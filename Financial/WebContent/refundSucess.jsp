@@ -21,12 +21,15 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 		<p class="text-center">Any time you can join with us again to learn from home & to experience new world of Education.</p>
 		
 		<div class="container">
-  <img src="images/lec2.jpg" alt="Snow">
+  <img src="images/lec2.jpg" class="im">
 </div><br><br>
 
  	<center><input type ="button" value="Log Out"  class="btn btn-danger"></center>
 	</div>
 	<hr>
+	
+	
+	
 	
 </body>
 <footer>

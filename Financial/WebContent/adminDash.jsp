@@ -3,11 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="Admin_styles.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
-integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<meta charset="ISO-8859-1">
-
+<link rel="stylesheet" href="admin_styles.css">
 <meta charset="ISO-8859-1">
 <title>Financial Admin's Dashboard</title>
 </head>
@@ -18,42 +14,108 @@ integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ
 <marquee behavior="scroll" direction="left">Financial Admin's Worksite   |    Financial Admin's Worksite     | Financial Admin's Worksite   |    Financial Admin's Worksite     | Financial Admin's Worksite   |    Financial Admin's Worksite     |
 Financial Admin's Worksite   |    Financial Admin's Worksite     |Financial Admin's Worksite   |    Financial Admin's Worksite     |Financial Admin's Worksite   |    Financial Admin's Worksite     |</marquee>
 
-			<center><h4>Financial Admin's Worksite</h4></center><br>
-			<center><div class="spinner-grow text-danger" role="status"><span class="sr-only">Loading...</span></div></center><br>
-		<center><h5>Welcome</h5></center>
+<div class="container2">
+			<center><h2>Financial Admin's Worksite</h2></center>
+		<center><h4>Welcome</h4></center>
 
-<div class="shadow-lg p-3 mb-5 bg-white rounded">
 
-<div class="row row-cols-1 row-cols-md-2">
-  <div class="col mb-4">
+<!---------------------------------------------------------------- The Modal 1 for students-->
+<div class="container">
+<hr><br><br><center><button id="myBtn" class = "batt" type ="submit" name="submit"><b><span>Student</span></b></button></center>
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content" >
+    <span class="close">&times;</span>
+    <center><p>Admin's tasks for Students </p></center>
+      <div class="col mb-4">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Student</h5>
+        <center><h5 class="card-title">Student</h5></center>
         <p class="card-text"></p>
         
-        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover">Approve Decline Refund Requests</button><br>
-		<br>
-		<button type="button" class="btn btn-lg btn-danger" data-toggle="popover">Check income reports</button>
+			        <form action="ViewAllRefundsServlet" method="post">
+			        <center><input type="hidden" name="status" value="pending"></center>
+			     
+					 <center> <input type="submit" class="btn info" value="Approve / Decline Refund Requests"></center>
+					</form>
+					
+					<br><br>
+		<center><button type="button" class="btn info">Check income reports</button></center>
       </div>
     </div>
   </div>
-  
-  <div class="col mb-4">
+  </div>
+</div>
+
+<!---------------------------------------------------- The Modal 2 for teacher-->
+<center><button id="myBtn2" class = "batt" type ="submit" name="submit"><b><span>Teacher</span></b></button></center><br><br><br><br><hr><br><br>
+<div id="myModal2" class="modal2">
+  <!-- Modal content -->
+  <div class="modal2-content">
+    <span class="close2">&times;</span>
+    <center><p>Admin's tasks for Teachers </p></center>
+      <div class="col mb-4">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title">Teacher</h5>
+        <center><h5 class="card-title">Teacher</h5></center>
         <p class="card-text"></p>
-        	   <a href="AddSalary.jsp"> 
-        	   <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" >Update teachers' monthly salary</button>
-        	   </a><br><br>
-			  <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" >Check salary payment history</button><br><br>
-		
-			  <button type="button" class="btn btn-lg btn-danger" data-toggle="popover">Check teachers' subjects and subscriptions</button><br><br>
+        
+      <center><a href="AddSalary.jsp"><button type="button"  class="btn info">Update teachers' monthly salary</button></a></center><br><br>
+	<center><button type="button" class="btn info" >Check salary payment history</button></center><br>
+	  <center><button type="button" class="btn info">Check teachers' subjects and subscriptions</button></center><br><br>
       </div>
     </div>
   </div>
-</div><br>
-	<hr>
+  </div>
+</div>
+
+
+
+<!------------------------------------------------------------------------------------------------------->
+</div>
+</div>  	
+
+<script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+} 
+</script>
+
+<script>
+var modal2 = document.getElementById("myModal2");
+var btn2 = document.getElementById("myBtn2");
+var span2 = document.getElementsByClassName("close2")[0];
+
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+
+window2.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+} 
+</script>
 </body>
+
 <footer></footer>
+
 </html>

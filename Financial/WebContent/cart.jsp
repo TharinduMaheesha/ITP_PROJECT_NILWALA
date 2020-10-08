@@ -12,6 +12,64 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <meta charset="ISO-8859-1">
 <title>Subject Cart</title>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
 </head>
 <body>
 <%@ include file="WEB-INF/Student_header.jsp" %> 
@@ -30,9 +88,6 @@
  <li><a href="#"><b></b></a></li>  
 </ul>
 </div>
-
-
-
 <div style = " max-width: 700px;  margin: auto;" class = "background"  class = "transbox" >
 <table style = " align : center;">
 <div class="table-responsive">
@@ -68,9 +123,6 @@ for(cart car:array){
 
 
 
-
-
-
 <form method="post" action="payFeeServlet" >
 
 			<br><br><center><h3><b>Total Fee</b></h3></center>
@@ -80,11 +132,10 @@ for(cart car:array){
 				
 				      <input type="text" value="<%=i*1000%>" name="totFee" class="alert alert-primary" class="form-control">
 				    </center></div>
-	
 			<hr>		
-			
-			
-			
+			<button class="open-button" onclick="openForm()">View Cart to Pay </button>
+
+
 			<center><br><br><h4><b>Enter Payment details</b> </h4>
 				<P>Enter here your payment details</P></center> 
 				 <center><h6>you can use</h6></center>
@@ -93,14 +144,18 @@ for(cart car:array){
 <p id="demo">Attention !!!</p>
 <button type="button" class="btn btn-outline-danger" onclick='document.getElementById("demo").innerHTML = "Please enter payment details correctly!"'>Click Me!</button><br><br>
 				  
+	<% ArrayList<cart> arrays = (ArrayList)request.getAttribute("Details2");
+for(cart cars:arrays){	
+%>				  
 				  <div class="form-row">
 				    <div class="col-md-6 mb-3">
 				      <label>Student No</label>
-				      <input type="text" class="form-control" name="uid" required>
-				   </div>
+				      <input type="text" class="form-control" name="uid" value="<%=cars.getStudentid()%>" required>
+				   </div> <%}%>
+	
 				    <div>
 				      <label>Card No - [9 to 18 digits only]</label>
-				      <input type="text" class="form-control" name="cardno"  required>
+				      <input type="text" class="form-control" name="cardno" placeholder="0000-0000-0000" required>
 				    </div>
 				  </div>
 				  <div>
@@ -110,11 +165,13 @@ for(cart car:array){
 				    </div>
 				    <div>
 				      <label>Security Code - [ 3 digits must be there ]</label>
-				      <input type="text" class="form-control" name="scode" pattern="[0-9][0-9][0-9]" min="-1" required>
+				      <input type="text" class="form-control" name="scode" pattern="[0-9][0-9][0-9]" min="-1" placeholder="3 characters only" required>
 				    </div>
 				  </div>
 				<br><br>
-				  <center><input type="submit" value="Pay Now" class="btn btn-primary btn-lg btn-block" ></center><br><br></div>
+				<center><button class = "batt" type ="submit" name="submit" onclick="myFunction2()" ><b><span>Pay Now</span></b></button></center><br>
+	
+				  
 <br><br>
 </form>
 <br><br><br><br>
@@ -122,8 +179,27 @@ for(cart car:array){
 function myFunction() {
   confirm("Are your sure do you want to remove it? ");
 }
+function myFunction2() {
+  confirm(" Are your sure.. ");
+}
 </script>
+<button class="open-button" onclick="openForm()">Privacy Policies </button>
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Nilwala Educational Institue</h1>
+	<p>It's better if you can read them before make payments.</p>
+    <button type="submit" class="btn"> privacy polilies on payment</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
 
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 
 
 </script>
